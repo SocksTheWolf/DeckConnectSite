@@ -1,6 +1,6 @@
-@media (min-width: 2000px) {
+@media (min-width: 2120px) {
   .wide .sidebar__right {
     position: fixed !important;
-    right: 3em;
+    right: 4em;
   }
 }

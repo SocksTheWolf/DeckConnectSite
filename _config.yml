@@ -15,29 +15,48 @@
 # in the templates via {{ site.myvariable }}.
 title: DeckConnect
 masthead_title: DeckConnect
-logo: "/assets/images/88x88.png"
 url: "https://deckconnect.me"
+logo: "/assets/images/88x88.png"
 og_image: "/assets/images/120x120.png"
 subtitle: "Connect Unreal & Elgato together~!"
 description: >- # this means to ignore newlines until "baseurl:"
-  DeckConnect is a set of plugins for the Elgato Stream Deck and
-  the Unreal Engine. Connect the two together and control your 
+  DeckConnect empowers your workflow with the Unreal Engine using
+  an Elgato Stream Deck. Connect the two together and control your 
   Unreal Application or Editor directly from your device!
 github_username: SocksTheWolf
+locale: "en-US"
 minimal_mistakes_skin: dark
 search: true
+timezone: America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 # Build settings
 markdown: kramdown
 theme: "minimal-mistakes-jekyll"
+enable_copy_code_button: true
+atom_feed:
+  hide: true
+lunr:
+  search_within_pages: true
+
 # Outputting
-paginate: 5
-paginate_path: "/updates/:num/"
 permalink: pretty
-timezone: America/Los_Angeles # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+pagination:
+  enabled: true
+  collection: 'posts'
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ':title - Page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2
 
 include:
   - _pages
+  - _tips
+  - _examples
   - favicon.ico
 
 # Exclude from processing.
@@ -57,7 +76,7 @@ exclude:
 
 # Plugins (previously gems:)
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
@@ -74,21 +93,27 @@ img:
 author:
   name   : "SocksTheWolf"
   avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "DeckConnect Developer"
   github : "SocksTheWolf"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
       url: "https://socksthewolf.com"
+    - label: "Twitch"
+      icon: "fab fa-fw fa-twitch"
+      url: "https://twitch.tv/socksthewolf"
 
 footer:
   links:
-    - label: "Developer Home"
+    - label: "Developer Website"
       icon: "fa fa-fw fa-earth-americas"
       url: "https://socksthewolf.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/socksthewolf"
+    - label: "Twitch"
+      icon: "fab fa-fw fa-twitch"
+      url: "https://twitch.tv/socksthewolf"
     - label: "Contact"
       icon: "fa fa-fw fa-envelope"
       url: "/contact"
@@ -120,7 +145,37 @@ defaults:
     values:
       layout: single
       author_profile: false
+  # _examples
+  - scope:
+      path: "_examples"
+      type: examples
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      read_time: false
+  # _tips
+  - scope:
+      path: "_tips"
+      type: tips
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      read_time: false
 
 category_archive:
   type: liquid
   path: /categories/
+
+tag_archive:
+  type: liquid
+  path: /tags/
+
+collections:
+  examples:
+    output: true
+    permalink: /:collection/:path/
+  recipes:
+    output: true
+    permalink: /:collection/:path/

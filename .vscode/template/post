@@ -1,5 +1,6 @@
 ---
 layout: single
+title: %title%
 author_sidebar: false
 date: %yyyy%-%mm%-%dd% %hh%:%ii%
 categories: 
