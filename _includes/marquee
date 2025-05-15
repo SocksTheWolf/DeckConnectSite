@@ -1,0 +1,15 @@
+<div class="marquee-area">
+  <h2 class="marquee-header">{{ page.marquee.header }}</h2>
+  <div class="marquee">
+    <ul class="marquee-content">
+      {% for item in page.marquee.items %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    <ul class="marquee-content" aria-hidden="true">
+      {% for item in page.marquee.items %}
+        <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

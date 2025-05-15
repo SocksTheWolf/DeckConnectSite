@@ -1,0 +1,6 @@
+@media (min-width: 2000px) {
+  .wide .sidebar__right {
+    position: fixed !important;
+    right: 3em;
+  }
+}

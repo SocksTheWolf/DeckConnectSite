@@ -1,0 +1,34 @@
+---
+layout: splash
+---
+
+<h4 class="downloadtext">Please note that any purchases are per-seat and are based on if you are editing/creating any actions in an Unreal Editor/Application.</h4>
+<div class="plans">
+  {% for plan in page.pricing_table %}
+    <ul class="plan">
+      <li style="background: {{ plan.color }}">
+        <h3>{{ plan.name }}</h3>
+      </li>
+      {% for feature in plan.features %}
+        <li {% if feature.highlight %} class="highlighted"{% endif %}>{{ feature.text }}</li>
+      {% endfor %}
+
+      {% if plan.call_to_action %}
+        <li class="pricing-cta"><div class="button"><a style="background: {{ plan.color }}" href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &rarr;</a></div></li>
+      {% endif %}
+    </ul>
+  {% endfor %}
+</div>
+<div class="faqcontainer">
+  {% if page.faq %}
+    <h2>Purchase FAQ</h2>
+    <dl class="faq">
+      {% for item in page.faq %}
+        <div>
+          <dt>{{ item.question }}</dt>
+          <dd>{{ item.answer }}</dd>
+        </div>
+      {% endfor %}
+    </dl>
+  {% endif %}
+</div>
