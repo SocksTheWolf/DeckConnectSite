@@ -3,6 +3,7 @@ title: DeckConnect
 excerpt: The best Unreal workflow *you'll ever have*
 layout: splash
 hidden: true
+read_time: false
 permalink: /
 header:
   overlay_color: "#4182e4"

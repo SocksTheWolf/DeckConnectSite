@@ -7,8 +7,8 @@ redirect_from: /getting-started
 toc: true
 toc_label: "Table of Contents"
 toc_icon: "cog"
-toc_sticky: true
 author_profile: false
+read_time: true
 classes: wide
 page_css:
   - /assets/css/jekyll_img.css
@@ -19,8 +19,12 @@ header:
 
 This guide assumes that you are familiar with installing Unreal Plugins as well as Elgato Stream Deck plugins from their respective marketplaces.
 
+If not, the respective guides can be found here:
+
+* [Installing Stream Deck Plugins](https://help.elgato.com/hc/en-us/articles/33589587352337-Elgato-Stream-Deck-Download-and-use-Plugins)
+* [Installing Code Plugins from FAB](https://dev.epicgames.com/documentation/en-us/unreal-engine/working-with-plugins-in-unreal-engine#installingpluginsfromfab)
+
 ## Unreal Plugin Setup
----
 
 These are the steps for setting up DeckConnect in Unreal, if you are not going to be editing nor creating actions in the Unreal Engine, you can skip down to the [Stream Deck Plugin Setup](#stream-deck-plugin-setup) section.
 
@@ -32,7 +36,7 @@ In the Editor, open up your `Project Settings` for your application.
 
 {% img src='/assets/images/setup/unreal/ProjectSettings.png' alt='Opening Project Settings' wrapper_class="center" size="halfsize" %}
 
-#### Find the DeckConnect settings under Plugins
+#### Find DeckConnect settings under Plugins
 
 In the window that appears, scroll down to the section that says `Plugins` and look for the entry that says `DeckConnect`.
 
@@ -89,7 +93,6 @@ To set up other types of events (like in C++), Multiple custom events can also b
 &nbsp;  
 
 ## Stream Deck Plugin Setup
----
 
 This step requires that you have downloaded and installed the DeckConnect Plugin from [Elgato Marketplace](/deck). Once this prerequistite has completed, continue with the steps below.
 
@@ -139,7 +142,7 @@ Check the boxes of the application instances you want to work with, and uncheck 
 
 Once you have managed your DeckConnect instances, click the back button to configure your button's action.
 
-### Step 4: Setting up Buttons
+### Step 3: Button Settings
 
 When you have enabled an instance, all of its DeckConnect actions will become immediately available to you! Just select an action from the dropdown to start using it immediately!
 
