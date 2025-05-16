@@ -84,10 +84,23 @@ plugins:
   - jekyll-include-cache
   - jekyll-redirect-from
   - jekyll_img
-  
+
 img:
   die_on_img_error: true
   pry_on_img_error: false
+
+jekyll_compose:
+  default_front_matter:
+    posts:
+      layout: single
+      author_sidebar: false
+      show_date: true
+      description: An Update Post Regarding DeckConnect
+      categories:
+        - Updates
+      tags:
+        - Unreal
+        - Elgato
 
 author:
   name   : "SocksTheWolf"
