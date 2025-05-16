@@ -7,6 +7,7 @@ gem 'tzinfo-data', '~> 1.2025.2'
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
 gem "minimal-mistakes-jekyll"
 gem "jekyll-paginate-v2"
+gem 'jekyll-liquify'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do

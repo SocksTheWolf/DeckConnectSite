@@ -39,6 +39,7 @@ lunr:
   search_within_pages: true
 
 # Outputting
+price: "TBA"
 permalink: pretty
 pagination:
   enabled: true
@@ -84,6 +85,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-redirect-from
   - jekyll_img
+  - jekyll-liquify
 
 img:
   die_on_img_error: true

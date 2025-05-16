@@ -3,6 +3,7 @@ layout: download
 permalink: /download
 title: Download
 heading: Download
+show_dl_notice: false
 description: Get the right DeckConnect plugin for you!
 pricing_table:
   - name: Stream Deck Plugin
@@ -10,36 +11,47 @@ pricing_table:
     features:
       - text: FREE
         highlight: true
-      - text: For any user of a DeckConnect powered application
+      - text: Requires [Elgato Deck Hardware](https://www.elgato.com/us/en/s/welcome-to-stream-deck)
         highlight: false
-      - text: Easy to Install
+      - text: Usable with any DeckConnect powered application
         highlight: false
-      - text: Does not require Unreal to be installed
+      - text: No Coding/Blueprints Experience Needed
         highlight: false
     call_to_action:
       link: /deck
       text: Download
-  - name: Unreal Plugin
+  - name: Unreal Engine Plugin
     color: "#3468b6"
     features:
-      - text: Starting at $35
+      - text: Starting at {{ site.price }}
         highlight: true
-      - text: Create Unlimited Stream Deck Actions
+      - text: Make Unlimited DeckConnect Actions
         highlight: false
-      - text: Edit actions with Blueprint
+      - text: Create & Edit functionality with Blueprint & C++
         highlight: false
-      - text: Share/Export actions with others
+      - text: Share/Export Actions with others
         highlight: false
     call_to_action:
       link: /fab
       text: Purchase
 faq:
-  - question: I'm just a Stream Deck user, do I need to purchase?
-    answer: <b>No</b>, unless you are editing/creating new actions in Unreal, you do not need to purchase a license.
-  - question: Are there other places I can purchase this from?
-    answer: Currently, the only purchase option is from the FAB marketplace.
-  - question: I'd like to purchase and redistribute the editing functionality for the users of my Unreal Application.
-    answer: Please contact us regarding redistribution with the editing functionality.
-  - question: Questions?
-    answer: Contact us for any further questions <a href="/contact">here</a>.
+  header: "FAQ"
+  items:
+    - question: I'm just a Stream Deck user, do I need to purchase?
+      answer: In 99% of the cases, the answer is yes. However, in some special terms (like bulk distribution), the answer may be no.
+    - question: How can I be sure?
+      answer: Feel free to [send us a message](/contact), we can figure it out.
+    - question: I'd like to purchase and redistribute the plugin for users of my Unreal Application.
+      answer: Please [contact us](/contact) regarding redistribution.
+    - question: Are there any other places I can purchase this from?
+      answer: Currently, the only purchase option is from the FAB marketplace.
+    - question: Does the plugin come with any default DeckConnect Actions that can be used?
+      answer: Currently no, as DeckConnect is meant to be uniquely integrated into an Unreal Application.
+    - question: How can I share my DeckConnect Actions with others?
+      answer: Share the DeckConnect `Actions` config data in `DefaultGame.ini` with anyone you want to use your Actions.
+    - question: Questions?
+      answer: Contact us for any further questions [here](/contact).
 ---
+
+Get the right DeckConnect plugin for you!
+{: .hidden}
