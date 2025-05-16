@@ -74,6 +74,7 @@ exclude:
   - _site
   - _drafts
   - .vscode
+  - CNAME
 
 # Plugins (previously gems:)
 plugins:
