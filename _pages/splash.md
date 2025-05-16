@@ -6,6 +6,7 @@ hidden: true
 read_time: false
 permalink: /
 header:
+  og_image: /assets/images/128x128.png
   overlay_color: "#4182e4"
   overlay_filter: 0.4
   overlay_image: /assets/images/header.png
