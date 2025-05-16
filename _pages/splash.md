@@ -7,6 +7,8 @@ read_time: false
 permalink: /
 header:
   overlay_color: "#4182e4"
+  overlay_filter: 0.4
+  overlay_image: /assets/images/header.png
   actions:
     - label: "Get Started Now!"
       url: "/download"

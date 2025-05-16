@@ -106,7 +106,7 @@ jekyll_compose:
 
 author:
   name   : "SocksTheWolf"
-  avatar : "/assets/images/bio-photo.jpg"
+  avatar : "/assets/images/128x128.png"
   bio    : "DeckConnect Developer"
   github : "SocksTheWolf"
   links:
