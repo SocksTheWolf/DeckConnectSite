@@ -14,6 +14,8 @@ page_css:
 
 DeckConnect supports a variety of different delegate types to fire, from blueprint delegates, native delegates and just plain lambdas, if you have a function, you can call it as a response to a DeckConnect Action.
 
+This page assumes that you have already gone through [the Setup guide](/setup), as that covers about 90% of all users.
+
 ## Terminology
 
 Throughout this document, you may see some new terms:
@@ -46,7 +48,7 @@ Look for the Blueprint Node `Get DeckConnectSubsystem` as seen below.
 
 ### Getting DeckConnect Actions
 
-While there is little to no need to enumerate DeckConnect Actions in most cases, you can still use the following functions to do Action queries.
+While there is little to no need to enumerate DeckConnect Actions in most cases, you can still use the following functions to query Actions.
 
 * [DoesActionExist](#doesactionexist)
 * [GetGuidForName](#getguidforname)
@@ -55,12 +57,6 @@ While there is little to no need to enumerate DeckConnect Actions in most cases,
 ---
 
 ### Registering a function to an Action
-
-**Blueprint**:
-
-This is provided via a widget called `Register DeckConnect Function`, this list will always automatically be updated, no need to do anything more.  
-
-However, if you directly know the internal GUID of an action you can use the `Register DeckConnect Function By GUID` blueprint node, but there's more room for potential error by doing so.
 
 **C++**:
 
@@ -74,7 +70,7 @@ The delegate used in C++ is `FDeckActionDelegate`.
 
 if (UDeckConnectSubsystem* dc = FDeckConnect::Get()) {
 
-  dc->Register(FLazyName(TEXT("Jump")), [this]() {
+  dc->Register(FName(TEXT("Example")), [this]() {
     // Some code to fire when the call is executed
   });
 
@@ -83,7 +79,13 @@ if (UDeckConnectSubsystem* dc = FDeckConnect::Get()) {
 }
 ```
 
-[More Examples can be found here](#register)
+**Blueprint**:
+
+Registering is provided via a widget called `Register DeckConnect Function`, this list will always automatically be updated, no need to do anything more.  
+
+A more advanced option if you already know the internal GUID of an Action, is to use `Register DeckConnect Function By GUID` blueprint node. It's not advised as there's more room for potential error by doing so, but it is slightly faster to do so.
+
+{% img src='/assets/images/reference/RegisterFunction.png' alt='Registering Functions' wrapper_class="center" size="halfsize" %}
 
 ---
 
@@ -201,17 +203,86 @@ if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
 
 #### Register
 
+Register allows you to register based on Action Name or on Action GUID a callback. When the Stream Deck sends over a command, all valid registered callbacks will fire.
+
+See [here for examples](#registering-a-function-to-an-action).
+
 ---
 
 #### GetGuidForName
+
+Returns the Action GUID for the given name. If it doesn't exist, an "Invalid" GUID will be returned that contains all values as zero.
+
+**C++**:
+
+```cpp
+#include "DeckConnect.h"
+if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
+  FGuid ActionGuid = DeckConnect->GetGuidForName(FName(TEXT("Example")));
+  if (ActionGuid.IsValid()) {
+    // ...
+  }
+}
+```
+
+**Blueprint**:
+
+Use the `Get GUID for Name` node like below. Make sure to check the validity of the return value.
+
+{% img src='/assets/images/reference/GetGUIDForName.png' alt='Getting an Action GUID for the given Name' wrapper_class="center" size="75%" %}
 
 ---
 
 #### GetNameForGuid
 
+Returns the Action Name for the given GUID. If it doesn't exist or is an "Invalid" GUID, `NAME_None` will be returned.
+
+**C++**:
+
+```cpp
+#include "DeckConnect.h"
+if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
+  FName ActionName = DeckConnect->GetNameForGuid(FGuid(...));
+  // Check that this is not the None Name
+  if (!ActionName.IsNone()) {
+    // ...
+  }
+}
+```
+
+**Blueprint**:
+
+Use the `Get Name for GUID` node. Checking for `NAME_None` is a little wacky, so it's advised to call [DoesActionExist](#doesactionexist) first.
+
+{% img src='/assets/images/reference/GetNameForGUID.png' alt='Getting an Action Name for the given GUID' wrapper_class="center" size="75%" %}
+
 ---
 
 #### DoesActionExist
+
+Returns true if the given `FName` or Action GUID (`FGuid`) is tied to a valid, known Action.  
+
+You do not need to call this if you got a valid result from `GetNameForGuid` or `GetGuidForName`.
+{: .notice--warning}
+
+**C++**:
+
+```cpp
+#include "DeckConnect.h"
+if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
+  const bool GUIDResult = DeckConnect->DoesActionExist(FGuid(...));
+  const bool NameResult = DeckConnect->DoesActionExist(FName(TEXT("Example")));
+  if (GUIDResult && NameResult) {
+    // ...
+  }
+}
+```
+
+**Blueprint**:
+
+Both methods are also accessible from Blueprint.
+
+{% img src='/assets/images/reference/DoesActionExist.png' alt='Getting if an Action exists' wrapper_class="center" size="75%" %}
 
 ---
 

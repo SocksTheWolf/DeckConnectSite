@@ -28,8 +28,8 @@ marquee:
 Control the Unreal Engine via an Elgato Stream Deck. Create hundreds of actions to control every aspect of your Unreal Editor, Application, and more!
 Use your Stream Deck to control Unreal Applications running on other machines, servers, even multiple applications at once.
 
-Why bother juggling multiple controllers and input devices? With DeckConnect, the power is right under your fingertips.
-
 {% include marquee %}
 
 {% include feature_row id="intro" type="center" %}
+
+Why bother juggling multiple controllers and input devices? With DeckConnect, the power is *right under your fingertips*.

@@ -56,7 +56,7 @@ If your action is going to run independently of any running game instance, you c
 
 ### Step 3: Hook our new Action to an Event
 
-**NOTE**: More in-depth tutorials can be found in [the documentation section](/docs).
+**NOTE**: More in-depth information can be found in [the documentation section](/docs).
 {: .notice--warning}  
 
 To quickly create an action within blueprint that fires whenever an user presses a button:  
@@ -81,7 +81,7 @@ To quickly create an action within blueprint that fires whenever an user presses
 &nbsp;  
 Our final Blueprint looks like this:  
 
-{% img src='/assets/images/setup/unreal/Output.png' alt='Final Blueprint Graph' wrapper_class="center" size="halfsize" %}  
+{% img src='/assets/images/setup/unreal/Output.png' alt='Final Blueprint Graph' wrapper_class="center" size="75%" %}  
 
 {:start="7"}
 7. Now whenever the user presses the button, they'll will be pressented with the message "Hello"!  
