@@ -84,8 +84,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-redirect-from
   - jekyll_img
-  - jekyll-youtube
-
+  
 img:
   die_on_img_error: true
   pry_on_img_error: false
@@ -149,15 +148,6 @@ defaults:
   - scope:
       path: "_examples"
       type: examples
-    values:
-      layout: single
-      author_profile: false
-      share: true
-      read_time: false
-  # _tips
-  - scope:
-      path: "_tips"
-      type: tips
     values:
       layout: single
       author_profile: false

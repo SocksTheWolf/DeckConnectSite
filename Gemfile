@@ -18,6 +18,5 @@ group :jekyll_plugins do
   gem "jekyll-include-cache"
   gem "jekyll-algolia"
   gem 'jekyll_img'
-  gem "jekyll-youtube"
   gem 'jekyll-compose'
 end

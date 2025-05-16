@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-layout: bigsingle
+layout: setup
 excerpt: "A quick guide to using the DeckConnect plugins"
 permalink: /setup
 redirect_from: /getting-started
