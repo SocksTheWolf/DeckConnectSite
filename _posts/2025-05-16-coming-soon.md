@@ -2,7 +2,6 @@
 title: Coming Soon
 date: 2025-05-16 03:04 +0000
 author_sidebar: false
-show_date: true
 description: 
 categories:
 - Updates
