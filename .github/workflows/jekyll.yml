@@ -19,6 +19,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -33,13 +34,12 @@ jobs:
     permissions: write-all
     continue-on-error: true
     steps:
-      - name: Cleanup Pages Deployments
-        uses: strumwolf/delete-deployment-environment@v3
+      - name: Cleanup Pages Actions
+        uses: igorjs/gh-actions-clean-workflow@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          environment: github-pages
-          onlyRemoveDeployments: true
-          onlyDeactivateDeployments: false
+          runs_to_keep: 1
+          runs_older_than: 1
   # Build job
   build:
     needs: cleanup
