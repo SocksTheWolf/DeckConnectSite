@@ -34,12 +34,19 @@ jobs:
     permissions: write-all
     continue-on-error: true
     steps:
+      - name: Cleanup Pages Deployments
+        uses: strumwolf/delete-deployment-environment@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          environment: github-pages
+          onlyRemoveDeployments: true
+          onlyDeactivateDeployments: false
       - name: Cleanup Pages Actions
         uses: igorjs/gh-actions-clean-workflow@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           runs_to_keep: 1
-          runs_older_than: 1
+          runs_older_than: 0
   # Build job
   build:
     needs: cleanup
