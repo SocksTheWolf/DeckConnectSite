@@ -6,7 +6,7 @@ toc_sticky: true
 toc_label: Table of Contents
 title: Documentation
 excerpt: "In depth technical information on DeckConnect and using it in a project"
-permalink: /docs/
+permalink: /docs
 classes: docs
 page_css:
   - /assets/css/jekyll_img.css
