@@ -3,6 +3,7 @@ title: Message Sent
 permalink: /sent
 search: false
 sitemap: false
+hidden: true
 layout: single
 author_profile: false
 ---
