@@ -296,10 +296,8 @@ This document was way too long. Thanks for getting this far, I hope it helped yo
 
 #### Unreal
 
-* Copying/Pasting entire DeckConnect Actions in the settings is not supported.
-* Clearing the DeckConnect Action Settings is not supported.
 * Currently, there is no way to _explicitly_ unbind a callback. Callbacks are automatically unbound when the world is destroyed after GC.
-* Unreal native land code needs testing.
+* Copy/Pasting settings does nothing. This is intentional to prevent disasterous data loss. If you want to share actions, copy and paste the actions from the config file instead.
 
 #### Elgato
 
