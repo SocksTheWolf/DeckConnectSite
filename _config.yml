@@ -39,6 +39,7 @@ lunr:
   search_within_pages: true
 
 # Outputting
+show_downloads: false
 price: "TBA"
 permalink: pretty
 pagination:

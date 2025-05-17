@@ -34,13 +34,13 @@ These are the steps for setting up DeckConnect in Unreal, if you are not going t
 
 In the Editor, open up your `Project Settings` for your application.
 
-{% img src='/assets/images/setup/unreal/ProjectSettings.png' alt='Opening Project Settings' wrapper_class="center" size="halfsize" %}
+{% img lazy src='/assets/images/setup/unreal/ProjectSettings.png' alt='Opening Project Settings' wrapper_class="center" size="halfsize" %}
 
 #### Find DeckConnect settings under Plugins
 
 In the window that appears, scroll down to the section that says `Plugins` and look for the entry that says `DeckConnect`.
 
-{% img src='/assets/images/setup/unreal/DeckConnectSettings.png' alt='Viewing DeckConnect Settings' wrapper_class="center" %}
+{% img lazy src='/assets/images/setup/unreal/DeckConnectSettings.png' alt='Viewing DeckConnect Settings' wrapper_class="center" %}
 
 ### Step 2: Add a new Action
 
@@ -64,29 +64,29 @@ To quickly create an action within blueprint that fires whenever an user presses
 1. Create a new Actor object in your current scene.
 2. Open the EventGraph and right click somewhere to open the Blueprint Widget Finder.
 3. Type in `DeckConnect` and choose the `Register DeckConnect Function` widget.  
-{% img src='/assets/images/setup/unreal/FindDeckNode.png' alt='Finding the DeckConnect Widget' wrapper_class="center" %}  
+{% img lazy src='/assets/images/setup/unreal/FindDeckNode.png' alt='Finding the DeckConnect Widget' wrapper_class="center" %}  
 
 {:start="4"}
 4. In the widget that appears, use the `Action Name` option to find the action you just created in the previous step.
 
-{% img src='/assets/images/setup/unreal/ActionNameList.png' alt='Action Name List' wrapper_class="center" size="halfsize" %}
+{% img lazy src='/assets/images/setup/unreal/ActionNameList.png' alt='Action Name List' wrapper_class="center" size="halfsize" %}
 
 {:start="5"}
 5. On the action pin, drag the pin to create a New Node. In the menu that appears, click `Add Event` and then `Add Custom Event`.
 
-{% img src='/assets/images/setup/unreal/AddCustomEvent.png' alt='Adding a new Custom Event' wrapper_class="center" size="halfsize" %}  
+{% img lazy src='/assets/images/setup/unreal/AddCustomEvent.png' alt='Adding a new Custom Event' wrapper_class="center" size="halfsize" %}  
 
 {:start="6"}
 6. You can set this up to perform any action you'd wish, but for the sake of simplicity, we'll have it print out a message on screen.  
 &nbsp;  
 Our final Blueprint looks like this:  
 
-{% img src='/assets/images/setup/unreal/Output.png' alt='Final Blueprint Graph' wrapper_class="center" size="75%" %}  
+{% img lazy src='/assets/images/setup/unreal/Output.png' alt='Final Blueprint Graph' wrapper_class="center" size="75%" %}  
 
 {:start="7"}
 7. Now whenever the user presses the button, they'll will be pressented with the message "Hello"!  
 
-{% img src='/assets/images/setup/unreal/Result.png' alt='Output upon pressing button' wrapper_class="center" size="halfsize" %}  
+{% img lazy src='/assets/images/setup/unreal/Result.png' alt='Output upon pressing button' wrapper_class="center" size="halfsize" %}  
 
 To set up other types of events (like in C++), Multiple custom events can also be bound to the same DeckConnect action if you desire!
 
@@ -100,7 +100,7 @@ This step requires that you have downloaded and installed the DeckConnect Plugin
 
 After installing the [Stream Deck Plugin](/deck), find the button category named `DeckConnect` in your plugin list. There should be an option named `DeckConnect Action`. Drag this item onto an empty Stream Deck button space.
 
-{% img src='/assets/images/setup/deck/CreateANewAction.png' alt='Creating a new Stream Deck button' wrapper_class="center" size="halfsize" %}
+{% img lazy src='/assets/images/setup/deck/CreateANewAction.png' alt='Creating a new Stream Deck button' wrapper_class="center" size="halfsize" %}
 
 You may notice that you have no actions in your dropdown! This is because you need to approve the source first.
 {: .notice--warning}
@@ -124,7 +124,7 @@ While running your Unreal application:
 **NOTE**: If this is the first time seeing an instance, a `(New!)` indicator will appear.
 {: .notice--info}
 
-{% img src='/assets/images/setup/deck/InstanceSettings.png' alt='Highlighted box around Instance Settings' wrapper_class="center" size="halfsize" %}
+{% img lazy src='/assets/images/setup/deck/InstanceSettings.png' alt='Highlighted box around Instance Settings' wrapper_class="center" size="halfsize" %}
 
 {:start="4"}
 4. On the page that appears, check the box next to the name of the Unreal application you opened previously.
@@ -135,7 +135,7 @@ Instances can be managed using DeckConnect's `Instance Manager`.
 
 Check the boxes of the application instances you want to work with, and uncheck any instances you don't.
 
-{% img src='/assets/images/setup/deck/InstanceManagement.png' alt='Managing Instances' wrapper_class="center" size="halfsize" %}
+{% img lazy src='/assets/images/setup/deck/InstanceManagement.png' alt='Managing Instances' wrapper_class="center" size="halfsize" %}
 
 **NOTE**: DeckConnect will automatically remember any approved instances and will continue to work with those instances the next time it sees them.  
 {: .notice--info}
@@ -146,7 +146,7 @@ Once you have managed your DeckConnect instances, click the back button to confi
 
 When you have enabled an instance, all of its DeckConnect actions will become immediately available to you! Just select an action from the dropdown to start using it immediately!
 
-{% img src='/assets/images/setup/deck/ActionListExample.png' alt='Actions List Example' wrapper_class="center" size="halfsize" class="rounded shadow" %}
+{% img lazy src='/assets/images/setup/deck/ActionListExample.png' alt='Actions List Example' wrapper_class="center" size="halfsize" class="rounded shadow" %}
 
 When an instance is approved, you will automatically get any updates of new actions created/removed in real time!
 

@@ -1,7 +1,7 @@
 ---
 layout: splash
 ---
-
+{% if site.show_downloads %}
 {% if page.show_dl_notice %}
 <h4 class="downloadtext">Please note that any purchases are per-seat and are based on if you are editing/creating any actions in an Unreal Editor/Application.</h4>
 {% endif %}
@@ -34,3 +34,6 @@ layout: splash
     </dl>
   {% endif %}
 </div>
+{% else %}
+<h4>Coming soon</h4>
+{% endif %}
