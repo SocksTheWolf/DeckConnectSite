@@ -3,7 +3,7 @@ layout: splash
 ---
 {% if site.show_downloads %}
 {% if page.show_dl_notice %}
-<h4 class="downloadtext">Please note that any purchases are per-seat and are based on if you are editing/creating any actions in an Unreal Editor/Application.</h4>
+<h4 class="downloadtext centext">Please note that any purchases are per-seat and are based on if you are editing/creating any actions in an Unreal Editor/Application.</h4>
 {% endif %}
 <div class="plans">
   {% for plan in page.pricing_table %}
@@ -35,5 +35,5 @@ layout: splash
   {% endif %}
 </div>
 {% else %}
-<h4>Coming soon</h4>
+<h1 class="centext">Coming soon</h1>
 {% endif %}
