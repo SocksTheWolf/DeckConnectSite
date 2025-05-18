@@ -11,7 +11,7 @@ page_css:
 ---
 
 Fill out the form below to contact us!
-
+<br />
 <noscript>You need javascript enabled to contact us.</noscript>
 <br />
 <form class="contact-form" action="https://api.web3forms.com/submit" id="contactform" method="POST">
@@ -35,9 +35,14 @@ Fill out the form below to contact us!
         <select name="category" required id="category">
           <option>General Inquiry</option>
           <option>Feedback</option>
-          <option>Support</option>
+          <option>Stream Deck Support</option>
+          <option>Unreal Plugin Support</option>
           <option>Sales</option>
         </select>
+      </div>
+      <div style="display: none" id="faborderid" class="form-group">
+        <label for="ordernum" class="form-label">FAB Order ID</label>
+        <input id="ordernum" name="ordernum" class="form-input" placeholder="Order ID #" type="text" />
       </div>
       <div class="form-group">
         <label for="message" class="form-label">Message</label>
@@ -45,7 +50,7 @@ Fill out the form below to contact us!
       </div>
       <div class="h-captcha" data-captcha="true" data-theme="dark" data-size="slim"></div>
     </div>
-    <button class="form-submit centered" type="submit">Send Message</button>
+    <button class="form-submit btn btn--info" type="submit">Send Message</button>
   </form>
 
 <script src="https://web3forms.com/client/script.js" async defer></script>
@@ -59,6 +64,18 @@ form.addEventListener('submit', function(e) {
         alert("Please fill out captcha field");
         return;
     }
+});
+// Show/hide FAB Order ID based off category selected
+const faborderid = document.getElementById("faborderid");
+const fabordernum = document.getElementById("ordernum");
+document.getElementById("category").addEventListener("change", function(ev) {
+  if (ev.target.value == "Unreal Plugin Support") {
+    faborderid.removeAttribute("style");
+    fabordernum.setAttribute("required", true);
+  } else {
+    faborderid.setAttribute("style", "display: none");
+    fabordernum.removeAttribute("required");
+  }
 });
 form.reset();
 </script>
