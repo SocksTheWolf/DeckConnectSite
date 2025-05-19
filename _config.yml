@@ -38,15 +38,17 @@ atom_feed:
 lunr:
   search_within_pages: true
 
-# Outputting
+# Site settings
 show_downloads: false
 price: "TBA"
+
+# Outputting
 permalink: pretty
 pagination:
   enabled: true
   collection: 'posts'
   per_page: 5
-  permalink: '/page/:num/'
+  permalink: '/page:num/'
   title: ':title - Page :num'
   limit: 0
   sort_field: 'date'
@@ -57,8 +59,6 @@ pagination:
 
 include:
   - _pages
-  - _tips
-  - _examples
   - favicon.ico
 
 # Exclude from processing.
@@ -90,7 +90,7 @@ plugins:
   - jekyll-liquify
 
 img:
-  die_on_img_error: true
+  die_on_img_error: false
   pry_on_img_error: false
 
 jekyll_compose:
@@ -143,13 +143,58 @@ defaults:
       read_time: false
       related: false
       share: false
+  # updates
+  - scope:
+      path: "updates/_posts"
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      read_time: true
+      show_date: true
+      comments: false
+      categories:
+        - updates
+      share: true
+      related: false
+      toc: false
+  # tips
+  - scope:
+      path: "tips/_posts"
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      categories:
+        - tips
+      read_time: false
+      show_date: true
+      comments: false
+      share: true
+      related: false
+      toc: false
+  # examples
+  - scope:
+      path: "examples/_posts"
+      type: posts
+    values:
+      layout: single
+      author_profile: false
+      categories:
+        - examples
+      read_time: false
+      show_date: true
+      comments: false
+      share: true
+      related: false
+  # posts
   - scope:
       path: "_posts"
       type: posts
     values:
       layout: single
       author_profile: false
-      read_time: true
+      read_time: false
       show_date: true
       comments: false
       share: true
@@ -161,15 +206,6 @@ defaults:
     values:
       layout: single
       author_profile: false
-  # _examples
-  - scope:
-      path: "_examples"
-      type: examples
-    values:
-      layout: single
-      author_profile: false
-      share: true
-      read_time: false
 
 category_archive:
   type: liquid
@@ -178,8 +214,3 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-
-collections:
-  examples:
-    output: true
-    permalink: /:collection/:path/

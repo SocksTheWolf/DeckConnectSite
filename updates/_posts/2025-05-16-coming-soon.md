@@ -1,16 +1,13 @@
 ---
-title: Coming Soon
+title: Plugins Coming Soon
 date: 2025-05-16 03:04 +0000
-author_sidebar: false
-description: 
-categories:
-- Updates
+description: Announcement of upcoming developments
 tags:
 - Unreal
 - Elgato
 ---
 
-## Hello World!
+## Hello World
 
 I'm working hard to finish these plugins and get them released on their respective markets.
 

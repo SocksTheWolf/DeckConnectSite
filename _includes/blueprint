@@ -1,0 +1,27 @@
+{% if include.file %}
+  {% if bpHeaderBlock %}
+  <!-- Blueprint script re-addition blocked -->
+  {% else %}
+    {% assign bpHeaderBlock = 'true' %}
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <script type="module">
+      {{% raw %}}
+      import { Blueprint } 
+      {{% rawoff %}}
+        from "{{ './assets/js/ueblueprint.min.js' | relative_url }}";
+  </script>
+  <link rel="stylesheet" href="{{ './assets/css/ueb-style.min.css'  | relative_url }}" />
+  {% endif %}
+
+  <div markdown="0">
+    {% capture include_file %}bp/{{include.file}}{% endcapture %}
+    <ueb-blueprint>
+        <template id="{{include.file}}">
+            {% include {{include_file}} %}                       
+        </template>
+    </ueb-blueprint><br />
+    <button class="btn btn--inverse copybpbutton" onclick="navigator.clipboard.writeText(document.getElementById('{{include.file}}').innerHTML)">Copy Blueprint To Clipboard</button>
+  </div>
+{% else %}
+  <h3 class="notice--warning">Warning: Missing Blueprint File!</h3>
+{% endif %}

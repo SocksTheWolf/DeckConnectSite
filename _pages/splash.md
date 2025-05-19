@@ -29,7 +29,8 @@ marquee:
 ---
 
 Control the Unreal Engine via an Elgato Stream Deck. Create hundreds of actions to control every aspect of your Unreal Editor, Application, and more!
-Use your Stream Deck to control Unreal Applications running on other machines, servers, even multiple applications at once.
+
+Use your Stream Deck to control Unreal Applications running on other machines, servers and even multiple applications at once.
 
 {% include marquee %}
 
