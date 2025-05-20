@@ -11,7 +11,7 @@ header:
   overlay_filter: 0.4
   overlay_image: /assets/images/header.png
   actions:
-    - label: "Get Started Now!"
+    - label: "Get DeckConnect Today!"
       url: "/download"
 intro: 
   - excerpt: ''
