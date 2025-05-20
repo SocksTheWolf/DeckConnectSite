@@ -205,7 +205,58 @@ if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
 
 Register allows you to register based on Action Name or on Action GUID a callback. When the Stream Deck sends over a command, all valid registered callbacks will fire.
 
+In C++ and in Blueprint, this will give you a delegate handle object called `FDeckActionDelegateHandle`, you can use this to unregister delegates.
+
+For Blueprint, there is no direct necessity to explicitly unregister delegates, these will be done when the world exits.
+{: .notice--info}
+
 See [here for examples](#registering-a-function-to-an-action).
+
+---
+
+#### Unregister
+
+Unregister allows you to unbind actions that you have bound to DeckConnect at any time.  
+
+This is really only useful for C++, as Blueprints will automatically unregister on detection of the owning object no longer existing. However, this function is provided for completion sake.
+{: .notice--info}
+
+**C++**:
+
+```cpp
+#include "DeckConnect.h"
+if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
+  FDeckActionDelegateHandle Handle = DeckConnect->Register(FName(TEXT("Example")), [](){
+    // Code to execute
+  });
+  // When called, Handle will become invalidated, and when pressing the action tied to "Example", this function will not fire.
+  DeckConnect->Unregister(Handle);
+}
+```
+
+---
+
+#### IsDelegateHandleValid
+
+Check to see if the given delegate handle is still valid. Returns true if the handle points to a bound object, false otherwise.
+
+This is really only useful for C++, as Blueprints will automatically unregister on detection of the owning object no longer existing. However, this function is provided for completion sake.
+{: .notice--info}
+
+**C++**:
+
+```cpp
+#include "DeckConnect.h"
+if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
+  FDeckActionDelegateHandle Handle = DeckConnect->Register(FName(TEXT("Example")), [](){
+    // Code to execute
+  });
+  if (DeckConnect->IsDelegateHandleValid(Handle))
+  {
+    // Code to execute on valid handle
+  }
+}
+```
 
 ---
 
@@ -296,8 +347,7 @@ This document was way too long. Thanks for getting this far, I hope it helped yo
 
 #### Unreal
 
-* Currently, there is no way to _explicitly_ unbind a callback. Callbacks are automatically unbound when the world is destroyed after GC.
-* Copy/Pasting settings does nothing. This is intentional to prevent disasterous data loss. If you want to share actions, copy and paste the actions from the config file instead.
+* Copy/Pasting Data values other than Name in the DeckConnect settings window does nothing. This is intentional to prevent disasterous data loss. If you want to share actions, copy and paste the actions from the config file instead.
 
 #### Elgato
 
