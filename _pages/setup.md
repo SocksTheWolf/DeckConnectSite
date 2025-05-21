@@ -1,10 +1,11 @@
 ---
 title: Getting Started
-layout: setup
+layout: bigsingle
 excerpt: "A quick guide to using the DeckConnect plugins"
 permalink: /setup
 redirect_from: /getting-started
 toc: true
+class: splash
 toc_label: "Table of Contents"
 toc_icon: "cog"
 author_profile: false

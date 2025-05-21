@@ -48,4 +48,4 @@ Use your Stream Deck to control Unreal Applications running on other machines, s
 Why bother juggling multiple controllers, jerryrigging an OSC server or using other input devices? With DeckConnect, get fast, native integration.
 
 The power is *right under your fingertips*.
-{: .text-center}
+{: .text-right}
