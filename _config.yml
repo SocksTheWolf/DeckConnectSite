@@ -121,6 +121,7 @@ jekyll-minifier:
     - 'ueblueprint.min.js'
     - 'fab.md'
     - 'deck.md'
+    - 'bp/**'
 
 author:
   name   : "SocksTheWolf"
