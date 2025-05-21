@@ -1,5 +1,6 @@
 ---
-title: DeckConnect
+title: Home
+override_title: DeckConnect
 excerpt: The best Unreal workflow *you'll ever have*
 layout: splash
 hidden: true

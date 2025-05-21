@@ -5,16 +5,18 @@ toc: true
 toc_sticky: true
 toc_label: Table of Contents
 title: Documentation
-excerpt: "In depth technical information on DeckConnect and using it in a project"
+excerpt: "In-depth technical documentation on DeckConnect"
 permalink: /docs
 classes: docs
+header:
+  overlay_color: "#4182e4"
 page_css:
   - /assets/css/jekyll_img.css
 ---
 
 DeckConnect supports a variety of different delegate types to fire, from blueprint delegates, native delegates and just plain lambdas, if you have a function, you can call it as a response to a DeckConnect Action.
 
-This page assumes that you have already gone through [the Setup guide](/setup), as that covers about 90% of all users.
+This page assumes that you have already gone through [the Setup guide](/setup), as that covers around 90% of all use cases.
 
 ## Terminology
 
