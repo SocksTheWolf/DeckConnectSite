@@ -1,5 +1,6 @@
 <div class="marquee-area">
   <h2 class="marquee-header">{{ page.marquee.header }}</h2>
+  <div class="line-spacer"></div>
   <div class="marquee">
     <ul class="marquee-content">
       {% for item in page.marquee.items %}

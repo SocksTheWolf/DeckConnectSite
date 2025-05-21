@@ -3,12 +3,16 @@
 }
 
 .marquee-area {
+  @include clearfix;
   color: #f5f5f5;
   margin-top: 50px;
-}
-
-.marquee-header {
-  margin-bottom: -5px;
+  display: block;
+  max-width: 100%;
+  margin-inline: auto;
+  padding-inline: 1em;
+  @include breakpoint($x-large) {
+    max-width: $max-width;
+  }
 }
 
 .marquee {
@@ -17,6 +21,14 @@
   user-select: none;
   gap: var(--gap);
   width: 100%;
+}
+
+.marquee-nobottom {
+  padding-bottom: 0 !important;
+}
+
+.line-spacer {
+  border-bottom: 1px solid #51555d;
 }
 
 .marquee-content {
@@ -32,7 +44,8 @@
 }
 .marquee-content > * {
   flex: 0 0 auto;
-  font-size: 25px;
+  //font-size: 25px;
+  font-weight: bold;
   margin: 2px;
   padding: 1rem 2rem;
   text-align: center;
