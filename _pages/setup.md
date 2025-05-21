@@ -148,7 +148,7 @@ When you have enabled an instance, all of its DeckConnect actions will become im
 
 {% img lazy src='/assets/images/setup/deck/ActionListExample.png' alt='Actions List Example' wrapper_class="center" size="halfsize" class="rounded shadow" %}
 
-When an instance is approved, you will automatically get any updates of new actions created/removed in real time!
+When an instance is approved, you will automatically get any new/updated/removed actions from the instance in real time!
 
 To create future Buttons on your Stream Deck, you can simply drag in a new `DeckConnect Action` and choose an action from the list.  
 &nbsp;  

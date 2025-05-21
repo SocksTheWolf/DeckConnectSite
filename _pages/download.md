@@ -37,20 +37,20 @@ pricing_table:
 faq:
   header: "FAQ"
   items:
-    - question: I'm just a Stream Deck user, do I need to purchase?
-      answer: In 99% of the cases, the answer is yes. However, in some special terms (like bulk distribution), the answer may be no.
-    - question: How can I be sure?
+    - question: Do I need to purchase?
+      answer: In 99% of the cases, the answer is yes (unless the application has a bulk distribution agreement with Editor support). 
+    - question: Do end users of the packaged game/application need to purchase DeckConnect?
+      answer: Nope, only if they are creating their own DeckConnect Actions.
+    - question: How can I be sure if I need to buy?
       answer: Feel free to [send us a message](/contact), we can figure it out.
-    - question: I'd like to purchase and redistribute the plugin for users of my Unreal Application.
-      answer: Please [contact us](/contact) regarding redistribution.
     - question: Are there any other places I can purchase this from?
-      answer: Currently, the only purchase option is from the FAB marketplace.
+      answer: Currently, the only purchase option is from the FAB marketplace. We might expand to other markets in the future.
     - question: Does the plugin come with any default DeckConnect Actions that can be used?
       answer: Currently no, as DeckConnect is meant to be uniquely integrated into an Unreal Application.
     - question: How can I share my DeckConnect Actions with others?
-      answer: Share the DeckConnect `Actions` config data in `DefaultGame.ini` with anyone you want to use your Actions.
-    - question: Questions?
-      answer: Contact us for any further questions [here](/contact).
+      answer: Share the DeckConnect `Actions` config data in `DefaultGame.ini` with anyone you want to use your Actions. Then just share your code/bp directly.
+    - question: I have more questions, where should I go?
+      answer: Contact us about any further questions [here](/contact).
 ---
 
 Get the right DeckConnect plugin for you!
