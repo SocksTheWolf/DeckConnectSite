@@ -26,6 +26,8 @@ marquee:
     - QA Testing
     - Events
     - Presentations
+    - Demonstrations
+    - Debugging
 ---
 
 Control the Unreal Engine via an Elgato Stream Deck. Create hundreds of actions to control every aspect of your Unreal Editor, Application, and more!
@@ -36,4 +38,7 @@ Use your Stream Deck to control Unreal Applications running on other machines, s
 
 {% include feature_row id="intro" type="center" %}
 
-Why bother juggling multiple controllers and input devices? With DeckConnect, the power is *right under your fingertips*.
+Why bother juggling multiple controllers, jerryrig an OSC server or use other input devices? With DeckConnect, get fast, native integration.
+
+The power is *right under your fingertips*.
+{: .text-center}
