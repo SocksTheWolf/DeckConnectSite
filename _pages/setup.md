@@ -22,8 +22,8 @@ This guide assumes that you are familiar with installing Unreal Plugins as well 
 
 If not, the respective guides can be found here:
 
-* [Installing Stream Deck Plugins](https://help.elgato.com/hc/en-us/articles/33589587352337-Elgato-Stream-Deck-Download-and-use-Plugins)
-* [Installing Code Plugins from FAB](https://dev.epicgames.com/documentation/en-us/unreal-engine/working-with-plugins-in-unreal-engine#installingpluginsfromfab)
+* {% href https://help.elgato.com/hc/en-us/articles/33589587352337-Elgato-Stream-Deck-Download-and-use-Plugins Installing Stream Deck Plugins %}
+* {% href https://dev.epicgames.com/documentation/en-us/unreal-engine/working-with-plugins-in-unreal-engine#installingpluginsfromfab Installing Code Plugins from FAB %}
 
 ## Unreal Plugin Setup
 
@@ -51,14 +51,14 @@ Once you have opened up the settings window, click the plus icon. This will crea
 You will have the option to name the Action, as well as setting it's execution ruleset.  
 
 Unique names are *heavily recommended* to make your actions easier to find.
-{: .notice--success}
+{: .notice--primary}
 
 If your action is going to run independently of any running game instance, you can check the `Run on Any Thread` option. However, the necessity to do so is rare.
 
 ### Step 3: Hook our new Action to an Event
 
-**NOTE**: More in-depth information can be found in [the documentation section](/docs).
-{: .notice--warning}  
+**NOTE**: More in-depth information can be found on [the documentation page](/docs).
+{: .notice--success}  
 
 To quickly create an action within blueprint that fires whenever an user presses a button:  
 
@@ -103,32 +103,36 @@ After installing the [Stream Deck Plugin](/deck), find the button category named
 
 {% img lazy src='/assets/images/setup/deck/CreateANewAction.png' alt='Creating a new Stream Deck button' wrapper_class="center" size="halfsize" %}
 
-You may notice that you have no actions in your dropdown! This is because you need to approve the source first.
+You may notice that you have no actions in your settings dropdown! You'll need to approve the DeckConnect instance first.
 {: .notice--warning}
 
 ### Step 2: Instances
 
 Actions, by default, do not immediately appear on the first time. DeckConnect uses a system called "Instances" to make sure that you can easily manage and categorize buttons from a variety of Unreal sources.
 
-Once a source has been "approved", the buttons from that source will sync automatically.
+Once a DeckConnect source has been "approved", the buttons from that source will sync automatically.
 
 #### Approving Instances
 
-DeckConnect will show you instances that it detects while running an application that has the Unreal DeckConnect plugin included. As well as all the instances you have ever approved.
+DeckConnect will show you all the instances of applications that:
 
-While running your Unreal application:
+* Currently running that have the Unreal DeckConnect plugin included.
+* Any DeckConnect instances you've ever approved.
 
-1. Open the Stream Deck software
-2. Choose a DeckConnect button.
-3. Click on the `Instance Settings` link as seen below.  
+To approve an instance:
 
-**NOTE**: If this is the first time seeing an instance, a `(New!)` indicator will appear.
+1. Run your Unreal Application that has DeckConnect.
+2. Open the Stream Deck software
+3. Choose a DeckConnect button.
+4. Click on the `Instance Settings` link as seen below.  
+
+**NOTE**: If DeckConnect detects an instance it hasn't seen before, a `(New!)` indicator will appear.
 {: .notice--info}
 
 {% img lazy src='/assets/images/setup/deck/InstanceSettings.png' alt='Highlighted box around Instance Settings' wrapper_class="center" size="halfsize" %}
 
-{:start="4"}
-4. On the page that appears, check the box next to the name of the Unreal application you opened previously.
+{:start="5"}
+5. On the page that appears, check the box next to the name of the Unreal application that's currently running.
 
 #### Managing Instances
 

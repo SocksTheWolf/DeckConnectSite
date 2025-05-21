@@ -19,6 +19,8 @@ url: "https://deckconnect.me"
 logo: "/assets/images/88x88.png"
 og_image: "/assets/images/120x120.png"
 subtitle: "Connect Unreal & Elgato together~!"
+copyright: SocksTheWolf
+copyright_url: https://socksthewolf.com
 description: >- # this means to ignore newlines until "baseurl:"
   DeckConnect empowers your workflow with the Unreal Engine using
   an Elgato Stream Deck. Connect the two together and control your 
@@ -86,12 +88,16 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-redirect-from
+  - jekyll_href
   - jekyll_img
   - jekyll-liquify
+  - jekyll-minifier
 
-img:
-  die_on_img_error: false
-  pry_on_img_error: false
+plugin_loggers:
+  PluginMetaLogger: fatal
+  ImgError: error
+  IfDraftError: fatal
+  DraftHtmlError: fatal
 
 jekyll_compose:
   default_front_matter:
@@ -104,6 +110,17 @@ jekyll_compose:
       tags:
         - Unreal
         - Elgato
+
+jekyll-minifier:
+  remove_spaces_inside_tags: false
+  compress_css: false
+  uglifier_args:
+    harmony: true
+  exclude: 
+    - 'sitemap.xml'
+    - 'ueblueprint.min.js'
+    - 'fab.md'
+    - 'deck.md'
 
 author:
   name   : "SocksTheWolf"

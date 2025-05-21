@@ -19,7 +19,6 @@
   display: flex;
   overflow: hidden;
   user-select: none;
-  gap: var(--gap);
   width: 100%;
 }
 
@@ -38,13 +37,12 @@
   min-width: 100%;
   gap: var(--gap);
   will-change: transform;
-  animation: scroll 15s linear infinite;
+  animation: scroll 15.2s linear infinite;
   animation-delay: 0s;
   list-style: none;
 }
 .marquee-content > * {
   flex: 0 0 auto;
-  //font-size: 25px;
   font-weight: bold;
   margin: 2px;
   padding: 1rem 2rem;
@@ -53,9 +51,9 @@
 
 @keyframes scroll {
   from {
-    transform: translateX(0);
+    transform: translateX(0%);
   }
   to {
-    transform: translateX(calc(-100% - var(--gap)));
+    transform: translateX(-100%);
   }
 }

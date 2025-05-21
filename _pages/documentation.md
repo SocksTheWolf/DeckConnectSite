@@ -61,17 +61,23 @@ While there is little to no need to enumerate DeckConnect Actions in most cases,
 **C++**:
 
 In C++, there are a variety of different register functions that can be used so long as you know either the `Action Guid` or the `Action Name`.
-Both Delegates and Lambdas can be registered via the various functions.
 
-The delegate used in C++ is `FDeckActionDelegate`.
+Native has two different forms of the `Register` function:  
+
+1. Takes an `FDeckActionDelegate`
+2. Takes a raw lambda/functor with the signature `void(void)`
+
+All register commands return a `FDeckActionDelegateHandle` handle to the registered function for the Action.  
+Unless you are binding raw lambdas (i.e. not using delegates) in game code, you usually do not need to store/use the return value.
+{: .notice--danger}
 
 ```cpp
 #include "DeckConnect.h"
 
 if (UDeckConnectSubsystem* dc = FDeckConnect::Get()) {
 
-  dc->Register(FName(TEXT("Example")), [this]() {
-    // Some code to fire when the call is executed
+  FDeckActionDelegateHandle Handle = dc->Register(FName(TEXT("Example")), [this]() {
+    /* Some code to fire when the Button is pressed */
   });
 
   dc->Register(FGuid(...), 
@@ -83,7 +89,7 @@ if (UDeckConnectSubsystem* dc = FDeckConnect::Get()) {
 
 Registering is provided via a widget called `Register DeckConnect Function`, this list will always automatically be updated, no need to do anything more.  
 
-A more advanced option if you already know the internal GUID of an Action, is to use `Register DeckConnect Function By GUID` blueprint node. It's not advised as there's more room for potential error by doing so, but it is slightly faster to do so.
+A more advanced option if you already know the internal GUID of an Action, is to use `Register DeckConnect Function By GUID` blueprint node. It's not advised as there's more room for potential error, but it is imperceptibly faster to use.
 
 {% img lazy src='/assets/images/reference/RegisterFunction.png' alt='Registering Functions' wrapper_class="center" size="halfsize" %}
 
@@ -142,14 +148,17 @@ This is the bread and butter of the entire system, and how you can directly inte
 
 Connects to the Stream Deck at the given address location. Does nothing if already connected. If no address is passed, it will use the connection address from the project settings.
 
+**NOTE**: By default, DeckConnect will autoconnect to the address in your settings. You can disable this functionality by unchecking the setting `Connect On Start` in the options.
+{: .notice--info}
+
 **C++**:
 
 ```cpp
 #include "DeckConnect.h"
 if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
-  // Connect to a specific URL
+  /* Connect to a specific URL */
   DeckConnect->Connect(TEXT("ws://127.0.0.1:32420"));
-  // Connect to the default settings location
+  /* Connect to the default settings location */
   DeckConnect->Connect();
 }
 ```
@@ -169,7 +178,7 @@ Disconnects the system to the current connection. Does nothing if not already co
 ```cpp
 #include "DeckConnect.h"
 if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
-  // Disconnect from whatever we are connected to
+  /* Disconnect from whatever we are connected to */
   DeckConnect->Disconnect();
 }
 ```
@@ -227,9 +236,12 @@ This is really only useful for C++, as Blueprints will automatically unregister 
 #include "DeckConnect.h"
 if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
   FDeckActionDelegateHandle Handle = DeckConnect->Register(FName(TEXT("Example")), [](){
-    // Code to execute
+    /* Code to execute */
   });
-  // When called, Handle will become invalidated, and when pressing the action tied to "Example", this function will not fire.
+  /* When called, Handle will become invalidated. 
+     On pressing the button tied to "Example" Action, 
+     this function will not fire. 
+  */
   DeckConnect->Unregister(Handle);
 }
 ```
@@ -249,11 +261,11 @@ This is really only useful for C++, as Blueprints will automatically unregister 
 #include "DeckConnect.h"
 if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
   FDeckActionDelegateHandle Handle = DeckConnect->Register(FName(TEXT("Example")), [](){
-    // Code to execute
+    /* Code to execute */
   });
   if (DeckConnect->IsDelegateHandleValid(Handle))
   {
-    // Code to execute on valid handle
+    UE_LOG(LogTemp, Log, TEXT("Action has a bound function!"));
   }
 }
 ```
@@ -271,7 +283,7 @@ Returns the Action GUID for the given name. If it doesn't exist, an "Invalid" GU
 if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
   FGuid ActionGuid = DeckConnect->GetGuidForName(FName(TEXT("Example")));
   if (ActionGuid.IsValid()) {
-    // ...
+    /* ... */
   }
 }
 ```
@@ -294,9 +306,9 @@ Returns the Action Name for the given GUID. If it doesn't exist or is an "Invali
 #include "DeckConnect.h"
 if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
   FName ActionName = DeckConnect->GetNameForGuid(FGuid(...));
-  // Check that this is not the None Name
+  /* Check that this is not the None Name */
   if (!ActionName.IsNone()) {
-    // ...
+    /* ... */
   }
 }
 ```
@@ -324,7 +336,7 @@ if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
   const bool GUIDResult = DeckConnect->DoesActionExist(FGuid(...));
   const bool NameResult = DeckConnect->DoesActionExist(FName(TEXT("Example")));
   if (GUIDResult && NameResult) {
-    // ...
+    /* ... */
   }
 }
 ```
@@ -339,7 +351,9 @@ Both methods are also accessible from Blueprint.
 
 ## Closing
 
-This document was way too long. Thanks for getting this far, I hope it helped you. If you have any feedback on this document, please feel free to [send a message via the contact form](/contact).
+This document was way too long. Thanks for getting this far, I hope it helped you.  
+
+If you have any feedback, please feel free to [send a message via the contact form](/contact).
 
 ### Known Issues
 
@@ -351,7 +365,8 @@ This document was way too long. Thanks for getting this far, I hope it helped yo
 
 #### Elgato
 
-No Known Issues.
+* DeckConnect will display an incorrect Unreal Plugin version in the instance manager. This is only a visual bug and will be fixed next version.
+* The port that DeckConnect uses cannot be easily changed.
 
 ---
 

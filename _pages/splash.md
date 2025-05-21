@@ -4,9 +4,9 @@ excerpt: The best Unreal workflow *you'll ever have*
 layout: splash
 hidden: true
 read_time: false
+hide_subtitle: true
 permalink: /
 header:
-  marquee: true
   og_image: /assets/images/128x128.png
   overlay_color: "#4182e4"
   overlay_filter: 0.4

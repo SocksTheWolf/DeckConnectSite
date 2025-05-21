@@ -8,6 +8,7 @@ gem "wdm", "~> 0.1.0" if Gem.win_platform?
 gem "minimal-mistakes-jekyll"
 gem "jekyll-paginate-v2"
 gem 'jekyll-liquify'
+gem "jekyll-minifier"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
@@ -20,4 +21,5 @@ group :jekyll_plugins do
   gem "jekyll-algolia"
   gem 'jekyll_img'
   gem 'jekyll-compose'
+  gem 'jekyll_href'
 end
