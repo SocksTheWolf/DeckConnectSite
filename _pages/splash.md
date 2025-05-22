@@ -10,7 +10,7 @@ header:
   og_image: /assets/images/128x128.png
   overlay_color: "#4182e4"
   overlay_filter: 0.4
-  overlay_image: /assets/images/header.png
+  overlay_image: /assets/images/header.webp
   actions:
     - label: "Get DeckConnect Today!"
       url: "/download"
@@ -20,12 +20,15 @@ feature_row:
   data:
   - image_path: /assets/images/splash/settingsthumb.webp
     image_path_full: /assets/images/splash/settingsfull.webp
+    alt: "DeckConnect's responsive settings system"
     popup: true
   - image_path: /assets/images/splash/dsthumb.webp
     image_path_full: /assets/images/splash/dsfull.webp
+    alt: "Extremely Simple Integration"
     popup: true
   - image_path: /assets/images/splash/samplesthumb.webp
     image_path_full: /assets/images/splash/samplesfull.webp
+    alt: "DeckConnect Use Cases"
     popup: true
 marquee:
   header: "Perfect For:"
