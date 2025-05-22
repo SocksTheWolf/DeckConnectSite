@@ -1,7 +1,7 @@
 ---
 title: Home
 override_title: DeckConnect
-excerpt: The best Unreal workflow *you'll ever have*
+excerpt: The best Unreal workflow _you'll ever have_
 layout: splash
 hidden: true
 hide_subtitle: true
@@ -29,6 +29,7 @@ feature_row:
     popup: true
 marquee:
   header: "Perfect For:"
+  include_spacer: true
   items:
     - Virtual Production
     - Power Users
@@ -52,7 +53,7 @@ Use your Stream Deck with Unreal Applications running on other machines, servers
 
 ---
 
-Why bother juggling multiple input devices, jerryrigging the {% glossary OSC protocol %} or hardcoding keyboard commands? With DeckConnect: unleash fast, native integration.
-
-The power is *right under your fingertips*.
+Why bother juggling multiple input devices, jerryrigging the {% glossary OSC protocol %} or hardcoding keyboard commands? With DeckConnect you get fast, native integration.
+{: .quick-bottom }
+The power is _right under your fingertips_.
 {: .text-right}

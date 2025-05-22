@@ -3,6 +3,8 @@ layout: download
 permalink: /download
 title: Download
 heading: Download
+price: "$39.99"
+show_downloads: false
 show_dl_notice: false
 description: Get the right DeckConnect plugin for you!
 pricing_table:
@@ -11,7 +13,7 @@ pricing_table:
     features:
       - text: FREE
         highlight: true
-      - text: Requires [Elgato Deck Hardware](https://www.elgato.com/us/en/s/welcome-to-stream-deck)
+      - text: Requires [Elgato Stream Deck Hardware](https://www.elgato.com/us/en/s/welcome-to-stream-deck)
         highlight: false
       - text: Usable with any DeckConnect powered application
         highlight: false
@@ -23,7 +25,7 @@ pricing_table:
   - name: Unreal Engine Plugin
     color: "#3468b6"
     features:
-      - text: Starting at {{ site.price }}
+      - text: Starting at {{ page.price }}
         highlight: true
       - text: Make Unlimited DeckConnect Actions
         highlight: false

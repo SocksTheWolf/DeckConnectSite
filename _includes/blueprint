@@ -15,12 +15,13 @@
 
   <div markdown="0">
     {% capture include_file %}bp/{{include.file}}{% endcapture %}
+    {% capture safe_name %}{{ include.file | replace "\.", ""}}{% endcapture %}
     <ueb-blueprint>
-        <template id="{{include.file}}">
+        <template id="{{safe_name}}">
             {% include {{include_file}} %}                       
         </template>
     </ueb-blueprint><br />
-    <button class="btn btn--inverse copybpbutton" onclick="navigator.clipboard.writeText(document.getElementById('{{include.file}}').innerHTML)">Copy Blueprint To Clipboard</button>
+    <button class="btn btn--inverse copybpbutton" onclick="navigator.clipboard.writeText(document.getElementById('{{safe_name}}').innerHTML)">Copy Blueprint To Clipboard</button>
   </div>
 {% else %}
   <h3 class="notice--warning">Warning: Missing Blueprint File!</h3>

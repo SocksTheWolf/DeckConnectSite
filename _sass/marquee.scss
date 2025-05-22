@@ -1,7 +1,3 @@
-:root {
-  --gap: 1rem;
-}
-
 .marquee-area {
   @include clearfix;
   color: #f5f5f5;
@@ -35,7 +31,7 @@
   display: flex;
   justify-content: space-around;
   min-width: 100%;
-  gap: var(--gap);
+  gap: 1rem;
   will-change: transform;
   animation: scroll 15.2s linear infinite;
   animation-delay: 0s;

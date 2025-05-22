@@ -6,7 +6,7 @@ permalink: /setup
 redirect_from: /getting-started
 toc: true
 class: splash
-toc_label: "Table of Contents"
+toc_label: "Contents"
 toc_icon: "cog"
 read_time: true
 classes: wide

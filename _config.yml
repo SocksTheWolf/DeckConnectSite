@@ -40,10 +40,6 @@ atom_feed:
 lunr:
   search_within_pages: true
 
-# Site settings
-show_downloads: false
-price: "$39.99"
-
 # Outputting
 permalink: pretty
 pagination:
@@ -125,6 +121,8 @@ jekyll-minifier:
     - 'deck.md'
     - 'bp/**'
     - 'site.webmanifest'
+    - 'tips/**'
+    - 'examples/**'
 
 social:
   type: "Organization"

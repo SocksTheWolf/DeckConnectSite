@@ -9,4 +9,5 @@ layout: single
 
 Thank you for sending a message, we'll get in touch shortly!
 
-[Go Back Home](/)
+[Go Home](/)
+{: .text-center}
