@@ -89,6 +89,7 @@ plugins:
   - jemoji
   - jekyll-include-cache
   - jekyll-redirect-from
+  - jekyll-glossary_tooltip
   - jekyll_href
   - jekyll_img
   - jekyll-liquify

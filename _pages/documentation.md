@@ -14,7 +14,7 @@ page_css:
   - /assets/css/jekyll_img.css
 ---
 
-DeckConnect supports a variety of different delegate types to fire, from blueprint delegates, native delegates and just plain lambdas, if you have a function, you can call it as a response to a DeckConnect Action.
+DeckConnect supports a variety of different delegate types to fire, from blueprint delegates, native delegates and just plain lambdas. If it can be coded (either via C++ or  blueprints), it can be used as a response to a DeckConnect Action.
 
 This page assumes that you have already gone through [the Setup guide](/setup), as that covers around 90% of all use cases.
 
@@ -22,9 +22,10 @@ This page assumes that you have already gone through [the Setup guide](/setup), 
 
 Throughout this document, you may see some new terms:
 
-* `Action` - Definition data that is tied directly to a button action on a Stream Deck. Actions are created and maintained in Unreal, they are assigned in the Stream Deck application.
+* `Button` - A physical button on a Stream Deck.
+* `Action` - Definition data. Actions are created and maintained in Unreal DeckConnect plugin, they are assigned to buttons using the Stream Deck application.
 * `GUID`/`Action GUID` - The internal indentifer for a given Action.
-* `Name`/`Action Name` - Human readable string that can be used to find a given Action. It is marginally slower to query based off this, but not by much.
+* `Name`/`Action Name` - Human readable string that can be used to find a given Action. It is marginally slower to query actions using this method, but not by much.
 
 ## Reference
 

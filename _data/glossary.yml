@@ -1,0 +1,8 @@
+- term: OSC protocol
+  definition: An method of connecting to hardware devices. It is slower, and more prone to error than any native solution.
+- term: Stream Deck
+  definition: A multi-touch hardware device that allows for assignable macros and buttons to accelerate workflow.
+  url: https://www.elgato.com/us/en/s/welcome-to-stream-deck
+- term: Unreal Engine
+  definition: A powerful game engine that can be also be used to also make applications, animations too
+  url: https://www.unrealengine.com

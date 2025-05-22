@@ -4,7 +4,6 @@ override_title: DeckConnect
 excerpt: The best Unreal workflow *you'll ever have*
 layout: splash
 hidden: true
-read_time: false
 hide_subtitle: true
 permalink: /
 header:
@@ -16,6 +15,9 @@ header:
     - label: "Get DeckConnect Today!"
       url: "/download"
 feature_row:
+  border: false
+  dropshadow: true
+  data:
   - image_path: /assets/images/splash/settingsthumb.webp
     image_path_full: /assets/images/splash/settingsfull.webp
     popup: true
@@ -38,15 +40,19 @@ marquee:
     - Presentations
     - Demonstrations
     - Debugging
+page_css:
+  - /assets/css/jekyll-glossary_tooltip.css
 ---
 
-Control the Unreal Engine via an Elgato Stream Deck. Create hundreds of actions to control every aspect of your Unreal Editor, Application, and more!
+Control the {% glossary Unreal Engine %} via an Elgato {% glossary Stream Deck %}. Create hundreds of actions to control every aspect of your Unreal Editor or other Unreal based applications.
 
-Use your Stream Deck to control Unreal Applications running on other machines, servers and even multiple applications at once.
+Use your Stream Deck with Unreal Applications running on other machines, servers and even multiple applications _at once_!
 
 {% include feature_row id="feature_row" %}
 
-Why bother juggling multiple controllers, jerryrigging an OSC server or using other input devices? With DeckConnect, get fast, native integration.
+---
+
+Why bother juggling multiple input devices, jerryrigging the {% glossary OSC protocol %} or hardcoding keyboard commands? With DeckConnect: unleash fast, native integration.
 
 The power is *right under your fingertips*.
 {: .text-right}

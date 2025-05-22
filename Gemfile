@@ -22,4 +22,5 @@ group :jekyll_plugins do
   gem 'jekyll_img'
   gem 'jekyll-compose'
   gem 'jekyll_href'
+  gem "jekyll-glossary_tooltip"
 end

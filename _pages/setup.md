@@ -28,6 +28,8 @@ If not, the respective guides can be found here:
 
 These are the steps for setting up DeckConnect in Unreal, if you are not going to be editing nor creating actions in the Unreal Engine, you can skip down to the [Stream Deck Plugin Setup](#stream-deck-plugin-setup) section.
 
+---
+
 ### Step 1: Open DeckConnect Settings
 
 #### Open Project Settings
