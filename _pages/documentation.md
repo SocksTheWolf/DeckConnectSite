@@ -3,7 +3,7 @@ layout: bigsingle
 classes: wide
 toc: true
 toc_sticky: true
-toc_label: Table of Contents
+toc_label: Contents
 title: Documentation
 excerpt: "In-depth technical documentation on DeckConnect"
 permalink: /docs

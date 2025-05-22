@@ -5,7 +5,8 @@ search: false
 sitemap: false
 hidden: true
 layout: single
-author_profile: false
 ---
 
 Thank you for sending a message, we'll get in touch shortly!
+
+[Go Back Home](/)

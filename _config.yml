@@ -76,8 +76,9 @@ exclude:
   - vendor/ruby/
   - _site
   - _drafts
-  - .vscode
+  - .vscode/
   - CNAME
+  - bp/
 
 # Plugins (previously gems:)
 plugins:
@@ -122,6 +123,11 @@ jekyll-minifier:
     - 'fab.md'
     - 'deck.md'
     - 'bp/**'
+    - 'site.webmanifest'
+
+social:
+  type: "Organization"
+  name: "DeckConnect"
 
 author:
   name   : "SocksTheWolf"
@@ -223,6 +229,7 @@ defaults:
       type: pages
     values:
       layout: single
+      read_time: false
       author_profile: false
 
 category_archive:

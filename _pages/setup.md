@@ -8,7 +8,6 @@ toc: true
 class: splash
 toc_label: "Table of Contents"
 toc_icon: "cog"
-author_profile: false
 read_time: true
 classes: wide
 page_css:
