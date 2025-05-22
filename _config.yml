@@ -40,6 +40,12 @@ atom_feed:
 lunr:
   search_within_pages: true
 
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-N9M9L0MNS6"
+    anonymize_ip: true
+
 # Outputting
 permalink: pretty
 pagination:
