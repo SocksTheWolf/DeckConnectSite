@@ -1,5 +1,22 @@
 # DeckConnect Website
 
-This is a theme that makes me scream~!
+This is the code behind the [DeckConnect website](https://deckconnect.me). I made this site in a fever dream that lasted about two days. I loathe writing CSS, so get ready for that nightmare.
 
-A combination of the edits that I did on the hydra theme but in minimal mistakes.
+The resulting site theme is a combination of:
+
+* Edits that I made on a personal fork of the abandoned Jekyll theme, [Hydra by CloudCannon](https://github.com/CloudCannon/hydra-jekyll-template)
+* Edits of the minimal mistakes theme.
+
+Some layouts (specifically the downloads one) are inspired, lifted or derived from the Hydra theme.
+
+This site is hosted on Github pages because it's quick and easy.
+
+---
+
+Unreal, Unreal Engine and the Unreal logo are copyrights/trademarks of Epic Games.
+
+Elgato, Stream Deck, Elgato Stream Deck are all copyrights/trademarks of Corsair Memory, Inc.
+
+Content, logos and DeckConnect are all copyrights of SocksTheWolf, 2025.
+
+All Rights Reserved.
