@@ -5,7 +5,9 @@ title: Download
 heading: Download
 price: "$39.99"
 show_downloads: false
-show_dl_notice: false
+dl_notice: 
+  show: false
+  text: Please note that any purchases are per-seat and are based on if you are editing/creating any actions in an Unreal Editor/Application.
 description: Get the right DeckConnect plugin for you!
 pricing_table:
   - name: Stream Deck Plugin

@@ -1,9 +1,14 @@
 ---
 layout: splash
 ---
+<!-- 
+   Portions of this layout are by CloudCannon for Hydra Jekyll theme
+   Licensed under MIT: https://github.com/CloudCannon/hydra-jekyll-template/blob/main/LICENSE
+-->
+
 {% if page.show_downloads %}
-  {% if page.show_dl_notice %}
-    <h4 class="downloadtext text-center">Please note that any purchases are per-seat and are based on if you are editing/creating any actions in an Unreal Editor/Application.</h4>
+  {% if page.dl_notice.show %}
+    <h4 class="downloadtext text-center">{{ page.dl_notice.text }}</h4>
   {% endif %}
 <div class="plans">
   {% for plan in page.pricing_table %}
@@ -35,7 +40,6 @@ layout: splash
   {% endif %}
 </div>
 {% else %}
-<br />
-<br />
-<h1 class="text-center">Coming Soon</h1>
+  <br /><br />
+  <h1 class="text-center">Coming Soon</h1>
 {% endif %}
