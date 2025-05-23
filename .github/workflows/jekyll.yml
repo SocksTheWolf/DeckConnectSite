@@ -10,6 +10,14 @@ on:
   # Runs on pushes targeting the default branch
   push:
     branches: ["master"]
+    # But ignore if the commit only updates these
+    # paths
+    paths-ignore:
+      - ".github/**"
+      - "README.md"
+      - "LICENSE"
+      - "CNAME"
+      - ".gitignore"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
