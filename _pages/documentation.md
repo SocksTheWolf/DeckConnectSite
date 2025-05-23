@@ -368,7 +368,6 @@ If you have any feedback, please feel free to [send a message via the contact fo
 
 #### Elgato
 
-* DeckConnect will display an incorrect Unreal Plugin version in the instance manager. This is only a visual bug and will be fixed next version.
 * The port that DeckConnect uses cannot be easily changed.
 
 ---
