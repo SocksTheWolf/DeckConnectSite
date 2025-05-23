@@ -5,14 +5,13 @@ excerpt: "A quick guide to using the DeckConnect plugins"
 permalink: /setup
 redirect_from: /getting-started
 toc: true
-class: splash
+toc_sticky: true
 toc_label: "Contents"
 toc_icon: "cog"
 read_time: true
-classes: wide
+classes: setup
 page_css:
   - /assets/css/jekyll_img.css
-  - /assets/css/setup.css
 header:
   overlay_color: "#4182e4"
 ---

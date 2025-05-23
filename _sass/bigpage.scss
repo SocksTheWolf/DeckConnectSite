@@ -1,5 +1,4 @@
 .bigpage {
-
   .page__inner-wrap {
     float: inline-start;
     margin-top: 1em;
@@ -23,6 +22,35 @@
       position: sticky !important;
       float: right !important;
     }
+  }
+}
+
+.docs, .setup {
+  overflow-x: hidden;
+}
+
+/* Flexible CSS sliding */
+@media (max-width: 1920px) {
+  .setup #main, .docs #main {
+    margin-inline: auto;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1920px) {
+  .setup #main, .docs #main {
+    margin-inline: initial !important;
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 1470px) and (max-width: 1920px) {
+  .setup #main, .docs #main {
+    max-width: 82% !important;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1470px) {
+  .setup #main, .docs #main {
+    max-width: 80% !important;
   }
 }
 

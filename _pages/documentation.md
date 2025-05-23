@@ -1,9 +1,9 @@
 ---
 layout: bigsingle
-classes: wide
 toc: true
 toc_sticky: true
 toc_label: Contents
+toc_icon: "cog"
 title: Documentation
 excerpt: "In-depth technical documentation on DeckConnect"
 permalink: /docs
