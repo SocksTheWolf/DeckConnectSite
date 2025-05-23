@@ -7,8 +7,8 @@ layout: splash
 -->
 
 {% if page.show_downloads %}
-  {% if page.dl_notice and page.show_dl_notice %}
-    <h4 class="downloadtext text-center">{{ page.dl_notice }}</h4>
+  {% if page.dl_notice.show %}
+    <h4 class="downloadtext text-center">{{ page.dl_notice.text }}</h4>
   {% endif %}
 <div class="plans">
   {% for plan in page.pricing_table %}
