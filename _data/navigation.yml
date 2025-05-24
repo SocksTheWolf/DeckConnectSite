@@ -1,11 +1,16 @@
 main:
   - title: "Setup"
     url: /setup
+    description: "Getting started with DeckConnect"
   - title: "Documentation"
+    decription: "DeckConnect's Technical documentation"
     url: /docs
   - title: "Updates"
     url: /updates
+    description: "Posts about DeckConnect's updates and news."
   - title: "Download"
     url: /download
+    description: "DeckConnect downloads"
   - title: "Contact"
+    description: "Contact page"
     url: /contact

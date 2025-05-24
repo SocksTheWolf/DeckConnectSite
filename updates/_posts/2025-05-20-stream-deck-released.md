@@ -1,7 +1,7 @@
 ---
 title: Stream Deck Plugin Released!
 date: 2025-05-20 03:04 +0000
-description: DeckConnect Stream Deck Plugin is now available!
+excerpt: DeckConnect Stream Deck Plugin is now available!
 tags:
 - Elgato
 ---

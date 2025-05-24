@@ -1,7 +1,7 @@
 ---
 title: Unreal Plugin Release Date
 date: 2025-05-23 07:19 -0700
-description: DeckConnect's Unreal Plugin now has a release date of May 27th!
+excerpt: DeckConnect's Unreal Plugin now has a release date of May 27th!
 tags:
 - Unreal
 ---
