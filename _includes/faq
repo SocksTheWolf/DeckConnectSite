@@ -1,0 +1,18 @@
+<!-- 
+   Portions of this layout are by CloudCannon for Hydra Jekyll theme
+   Licensed under MIT: https://github.com/CloudCannon/hydra-jekyll-template/blob/main/LICENSE
+-->
+
+{% if page.faq %}
+  <div class="faqcontainer">
+      <h2>{{ page.faq.header | strip | default: "FAQ" }}</h2>
+      <dl class="faq">
+        {% for item in page.faq.items %}
+          <div>
+            <dt>{{ item.question }}</dt>
+            <dd>{{ item.answer | liquify | newline_to_br | markdownify }}</dd>
+          </div>
+        {% endfor %}
+      </dl>
+  </div>
+{% endif %}

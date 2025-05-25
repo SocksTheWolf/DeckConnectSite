@@ -1,11 +1,29 @@
+{% if site.social.type == "Organization" %}
+  {% capture organization %}
+      "@type": "Organization",
+      "name": {{ site.social.name | default: site.name | jsonify }},
+      "url": {{ '/' | absolute_url | jsonify }}{% if site.og_image %},
+      "logo": {{ site.og_image | jsonify }}{% endif %}{% if site.social.links %},
+      "sameAs": {{ site.social.links | jsonify }}{% endif %}
+  {% endcapture %}
+{% else %}
+  {% assign organization = "" %}
+{% endif %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  {% if site.social.type == "Organization" -%}
-    "@type": "Organization",
-    "url": {{ '/' | absolute_url | jsonify }}{% if site.og_image %},
-    "logo": {{ site.og_image | jsonify }}{% endif %}{% if site.social.links %},
-    "sameAs": {{ site.social.links | jsonify }}{% endif %}
+  {% if page.faq %}
+    "@type":"FAQPage",
+    "mainEntity":[
+      {% for item in page.faq.items %}
+        {"@type":"Question","name":"{{item.question | strip}}","acceptedAnswer":{"@type":"Answer","text":"{{item.answer | markdownify | strip_html | strip  }}"}}
+        {% if forloop.last == false %},{% else %}],{% endif %}
+      {% endfor %}
+    "author": { 
+      {{ organization | strip }}
+    }
+  {% else if site.social.type == "Organization" -%}
+    {{ organization | strip }}
   {%- else -%}
     "@type": "Person",
     "name": {{ site.social.name | default: site.name | jsonify }},
@@ -13,4 +31,6 @@
     "sameAs": {{ site.social.links | jsonify }}{% endif %}
   {%- endif %}
 }
+
+
 </script>

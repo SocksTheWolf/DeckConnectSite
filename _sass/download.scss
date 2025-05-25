@@ -12,16 +12,22 @@
 	@include flex-flow(wrap);
 	padding: 50px 0 30px 0;
 
-  ul li {
-    margin-bottom: 0px;
-  }
+		ul {
+			li {
+				margin-bottom: 0px;
 
-	@media (min-width: 862px) and (max-width: 904px) {
-		li p {
-			word-break: break-all;
-			margin-bottom: 0rem;
-			padding-right: 2%;
-			padding-left: 3%;
+				p {
+					margin-bottom: 15px;
+				}
+
+				@media (min-width: 862px) and (max-width: 904px) {
+				p {
+					word-break: break-all;
+					margin-bottom: 0rem;
+					padding-right: 2%;
+					padding-left: 3%;
+				}
+			}
 		}
 	}
 
@@ -35,28 +41,35 @@
 		width: 100%;
 
 		.highlighted {
-			font-size: 1.2em
+			font-size: 1.2em;
+			border-bottom: 1px solid $border-color;
+			padding-bottom: 5px;
 		}
 
 		.pricing-cta {
 			padding: 0;
 
-			a {
+			* {
 				display: block;
 				box-sizing: border-box;
-				padding: 20px 0;
+				padding: 15px 0;
 				border-radius: 0 0 5px 5px;
 				border: 0;
-				color: rgba(255, 255, 255, 0.75);
+				color: white;
+				text-rendering: optimizeLegibility;
 			}
       a:hover {
-        color: white;
+        color: black;
       }
 		}
 
 		@media #{$desktop} {
 			-webkit-flex: 1;
 			flex: 1;
+		}
+
+		li:nth-child(even):not([class]) {
+			background-color: $border-color;
 		}
 
 		li {
@@ -94,6 +107,7 @@
     dt {
       font-weight: bold;
       margin: 0 0 5px 0;
+			border-bottom: 1px solid $border-color;
     }
 
     dd {

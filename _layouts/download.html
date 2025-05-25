@@ -13,7 +13,7 @@ layout: splash
 <div class="plans">
   {% for plan in page.pricing_table %}
     <ul class="plan">
-      <li style="background: {{ plan.color }}">
+      <li class="plan-title" style="background: {{ plan.color }}">
         <h3>{{ plan.name }}</h3>
       </li>
       {% for feature in plan.features %}
@@ -21,24 +21,20 @@ layout: splash
       {% endfor %}
 
       {% if plan.call_to_action %}
-        <li class="pricing-cta"><div class="button"><a rel="nofollow" style="background: {{ plan.color }}" href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &rarr;</a></div></li>
+        <li class="pricing-cta" style="background: {{ plan.color }}">
+          <div class="button">
+            {% if plan.call_to_action.can_use %}
+              <a rel="nofollow" href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &rarr;</a>
+            {% else %}
+              <span>Coming Soon!</span>
+            {% endif %}
+          </div>
+        </li>
       {% endif %}
     </ul>
   {% endfor %}
 </div>
-<div class="faqcontainer">
-  {% if page.faq %}
-    <h2>{{ page.faq.header | default: "Purchase FAQ" }}</h2>
-    <dl class="faq">
-      {% for item in page.faq.items %}
-        <div>
-          <dt>{{ item.question }}</dt>
-          <dd>{{ item.answer | liquify | markdownify }}</dd>
-        </div>
-      {% endfor %}
-    </dl>
-  {% endif %}
-</div>
+  {% include faq %}
 {% else %}
   <br /><br />
   <h1 class="text-center">Coming Soon</h1>

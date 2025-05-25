@@ -28,4 +28,8 @@
   <meta name="robots" content="{%if page.robots.noindex %}noindex{% endif %} {%if page.robots.nofollow %}nofollow{% endif %}">
 {% endif %}
 
+{% if page.url == '/download' %}
+  {% include schema.html %}
+{% endif %}
+
 <!-- end custom head snippets -->

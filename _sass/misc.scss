@@ -9,3 +9,15 @@
 .toc .nav__title, .form-submit {
   font-size: 1em !important;
 }
+
+.notice--success {
+  a {
+    color: $link-color;
+  }
+  a:hover {
+    color: white !important;
+  }
+  a:visited {
+    color: $link-color-visited;
+  }
+}
