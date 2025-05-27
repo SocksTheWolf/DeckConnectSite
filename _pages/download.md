@@ -46,19 +46,16 @@ faq:
     - question: Do I need to purchase?
       answer: If you are working in development, the answer is yes (unless the application in question has a special bulk redistribution agreement). 
     - question: Do end users need to purchase DeckConnect?
-      answer: No. End users, such as those that purchase a copy of a game/application from a marketplace, do not need to purchase DeckConnect to use it. They would just need [the Free Stream Deck plugin](/deck).
+      answer: No. End users, such as those that purchase a copy of a game/application from a marketplace, do not need to purchase DeckConnect to use it. They would just need [the free Stream Deck plugin](/deck).
     - question: What is the software license like?
       answer: >- 
-        DeckConnect is a code plugin for the Unreal Engine.
-        
-        
-        As per [FAB EULA section 2e](https://www.fab.com/eula), code plugins are sold on a per-seat basis. They can be shared between project developers as per terms 5a and 5b of the EULA.
+        DeckConnect is a code plugin for the Unreal Engine. Please see the [FAB EULA](https://www.fab.com/eula) (specifically sections 2e, 5a, and 5b) for information about code plugin licenses.
     - question: Where can I purchase DeckConnect from?
       answer: Currently, the only purchase option is from the FAB marketplace. We might expand to other markets in the future. If you have special needs, feel free to [contact us](/contact).
     - question: What do I get with my purchase?
       answer: Everything in the `Unreal Engine Plugin` section above plus technical support.
     - question: How can I get support for the DeckConnect Unreal Plugin?
-      answer: Go to [the contact page](/contact), and choose the `Unreal Plugin Support` option. You will need your FAB Order ID, [which you can find from the Unreal transactions page](https://www.epicgames.com/account/transactions).
+      answer: Go to [the contact page](/contact), and choose the `Unreal Plugin Support` option. You will need your FAB Order ID, which you can find from your [Epic account's transactions page](https://www.epicgames.com/account/transactions).
     - question: Does the plugin come with default DeckConnect Actions?
       answer: Currently no, as DeckConnect is meant to be uniquely integrated into an Unreal Application.
     - question: I have more questions about DeckConnect!
