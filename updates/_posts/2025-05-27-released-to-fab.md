@@ -1,5 +1,5 @@
 ---
-date: 2025-05-27 9:00 -0700
+date: 2025-05-27 14:00 -0700
 title: DeckConnect is now on FAB!
 excerpt: The Unreal Engine version of DeckConnect is on the FAB marketplace!
 tags:

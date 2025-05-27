@@ -127,12 +127,14 @@ jekyll-minifier:
     - 'examples/**'
 
 social:
-  type: "Organization"
-  name: "DeckConnect"
+  schema: "Website"
+  creator: "Person"
+  name: "SocksTheWolf"
+  url: "https://socksthewolf.com"
+
 
 author:
   name   : "SocksTheWolf"
-  avatar : "/assets/images/128x128.png"
   bio    : "DeckConnect Developer"
   github : "SocksTheWolf"
   links:

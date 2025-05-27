@@ -8,7 +8,7 @@ show_downloads: true
 dl_notice: 
   show: false
   text: Please note that any purchases are per-seat and are based on if you are editing/creating any actions in an Unreal Editor/Application.
-excerpt: Download options for DeckConnect and FAQ regarding purchasing
+excerpt: Download options for DeckConnect and purchase FAQ
 pricing_table:
   - name: Stream Deck Plugin
     color: "#4182e4"
@@ -37,7 +37,7 @@ pricing_table:
       - text: Share Actions with others
         highlight: false
     call_to_action:
-      can_use: false
+      can_use: true
       link: /fab
       text: Purchase
 faq:
