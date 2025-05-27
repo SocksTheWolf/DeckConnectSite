@@ -4,7 +4,7 @@ permalink: /download
 title: Download
 heading: Download
 price: "$39.99"
-show_downloads: false
+show_downloads: true
 dl_notice: 
   show: false
   text: Please note that any purchases are per-seat and are based on if you are editing/creating any actions in an Unreal Editor/Application.

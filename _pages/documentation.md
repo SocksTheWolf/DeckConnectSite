@@ -365,6 +365,7 @@ If you have any feedback, please feel free to [send a message via the contact fo
 #### Unreal
 
 * Copy/Pasting Data values other than Name in the DeckConnect settings window does nothing. This is intentional to prevent disasterous data loss. If you want to share actions, copy and paste the actions from the config file instead.
+* Versions earlier than 1.00.07 will append a 0 at the end of any DeckConnect Action name incorrectly. This is fixed in latest versions.
 
 #### Elgato
 
