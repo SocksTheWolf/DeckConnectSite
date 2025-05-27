@@ -82,7 +82,7 @@ jobs:
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
 
-  # Deployment job
+  # Deployment and cache clean job
   deploy:
     environment:
       name: github-pages
@@ -93,15 +93,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
-  # Clear github cache
-  clearcache:
-    name: "Clear Cache"
-    if: contains(github.event.head_commit.message, '#clear')
-    runs-on: ubuntu-latest
-    needs: deploy
-    steps:
       - name: Cloudflare Cache Cleaner
+        if: contains(github.event.head_commit.message, '#clear')
         uses: Cyb3r-Jak3/action-cloudflare-cache@v2.0.0
         with:
           zone: ${{ secrets.CLOUDFLARE_ZONE }}
