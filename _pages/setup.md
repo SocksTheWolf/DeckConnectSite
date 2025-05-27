@@ -88,7 +88,8 @@ Our final Blueprint looks like this:
 
 {% img lazy src='/assets/images/setup/unreal/Result.png' alt='Output upon pressing button' wrapper_class="center" size="halfsize" %}  
 
-To set up other types of events (like in C++), Multiple custom events can also be bound to the same DeckConnect action if you desire!
+Multiple events can also be bound to the same DeckConnect action if you desire!  
+To set up other types of events (like in C++), check out [the documentation page here](/docs).  
 
 &nbsp;  
 
