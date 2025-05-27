@@ -1,7 +1,7 @@
 ---
 title: Home
 override_title: DeckConnect
-excerpt: The best Unreal workflow _you'll ever have_
+excerpt: _Power up your Unreal workflow with a Stream Deck!_
 layout: splash
 hidden: true
 hide_subtitle: true
