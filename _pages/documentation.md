@@ -18,6 +18,10 @@ DeckConnect supports a variety of different delegate types to fire, from bluepri
 
 This page assumes that you have already gone through [the Setup guide](/setup), as that covers around 90% of all use cases.
 
+**If** you are using the C++ interface, don't forget to link DeckConnect in your PrivateDependencies via the `<ProjectName>.Build.cs` file, like so:  
+`PrivateDependencyModuleNames.Add("DeckConnect");`
+{: .notice--info}
+
 ## Terminology
 
 Throughout this document, you may see some new terms:
