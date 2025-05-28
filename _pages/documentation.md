@@ -219,11 +219,11 @@ if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
 
 #### Register
 
-Register allows you to register based on Action Name or on Action GUID a callback. When the Stream Deck sends over a command, all valid registered callbacks will fire.
+Register allows you to assign a callback based on Action Name or on Action GUID. When the Stream Deck sends over a button pressed, all valid registered callbacks will fire.
 
-In C++ and in Blueprint, this will give you a delegate handle object called `FDeckActionDelegateHandle`, you can use this to unregister delegates.
+In C++ and in Blueprint, this function will return a handle object called `FDeckActionDelegateHandle`, you can use this to unregister your callbacks.
 
-For Blueprint, there is no direct necessity to explicitly unregister delegates, these will be done when the world exits.
+For Blueprint, there is no direct necessity to explicitly unregister callbacks/delegates, these will be done when the world exits.
 {: .notice--info}
 
 See [here for examples](#registering-a-function-to-an-action).
@@ -232,9 +232,9 @@ See [here for examples](#registering-a-function-to-an-action).
 
 #### Unregister
 
-Unregister allows you to unbind actions that you have bound to DeckConnect at any time.  
+Unregister allows you to unbind callbacks that you have bound to DeckConnect at any time.  
 
-This is really only useful for C++, as Blueprints will automatically unregister on detection of the owning object no longer existing. However, this function is provided for completion sake.
+This is really only useful for C++, as Blueprints will automatically unregister on detection of the owning object no longer existing. This function is provided for completion sake.
 {: .notice--info}
 
 **C++**:
