@@ -1,9 +1,11 @@
 ---
 title: Home
 override_title: DeckConnect
-excerpt: _Power up your Unreal workflow with a Stream Deck!_
+override_excerpt: _Power up your Unreal workflow with a Stream Deck!_
+excerpt: Power up your Unreal workflow with a Stream Deck!
 layout: splash
 hidden: true
+search_lite: true
 hide_subtitle: true
 permalink: /
 header:

@@ -6,7 +6,7 @@ pagination:
   enabled: true
   per_page: 8
   category: examples
-  permalink: /:num/
+  permalink: /page/:num/
 entries_layout: list
 no_header: true
 ---

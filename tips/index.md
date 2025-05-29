@@ -1,14 +1,14 @@
 ---
 title: "Tips"
+excerpt: Usage tips for DeckConnect to get the most out of the plugin
 layout: postpages
+no_header: true
 permalink: /tips
 pagination:
   enabled: true
-  per_page: 8
+  per_page: 5
   category: tips
-  permalink: /:num/
-entries_layout: grid
-no_header: true
+  permalink: /page/:num/
 ---
 
 Usage tips for DeckConnect to get the most out of the plugin
