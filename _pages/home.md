@@ -9,6 +9,12 @@ search_lite: true
 hide_subtitle: true
 permalink: /
 header:
+  video: 
+    id: f7AevVU5Jmo
+    class: front-float
+    width: 500
+    height: 300
+    provider: "youtube"
   og_image: /assets/images/128x128.png
   overlay_color: "#4182e4"
   overlay_filter: 0.4
@@ -16,6 +22,9 @@ header:
   actions:
     - label: "Get DeckConnect Today!"
       url: "/download"
+    - label: "View the trailer!"
+      url: "https://youtu.be/f7AevVU5Jmo"
+      class: "trailer-button"
 feature_row:
   border: false
   dropshadow: true

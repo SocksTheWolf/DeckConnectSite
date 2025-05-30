@@ -43,9 +43,12 @@
       {% if page.header.actions %}
         <p>
         {% for action in page.header.actions %}
-          <a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--large">{{ action.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
+          <a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--large {% if action.class %}{{ action.class }}{% endif %}">{{ action.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
         {% endfor %}
         </p>
+      {% endif %}
+      {% if page.header.video %}
+        {% include video id=page.header.video.id class=page.header.video.class provider=page.header.video.provider width=page.header.video.width height=page.header.video.height %}
       {% endif %}
     </div>
     {% if page.marquee %}

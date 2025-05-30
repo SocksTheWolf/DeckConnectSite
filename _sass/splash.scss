@@ -1,0 +1,52 @@
+/* based off the embedresponsively.com code */
+.front-float {
+  display: inline;
+  left: 33em;
+  top: -11em;
+  position: relative;
+  margin-bottom: 1em;
+  overflow: hidden;
+
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+  }
+}
+
+// full screen video fixes
+:-webkit-full-screen-ancestor {
+  .masthead,
+  .page__footer {
+    position: static;
+  }
+}
+
+.trailer-button {
+  display: none;
+}
+
+@media (max-width: 1279px) {
+  .front-float {
+    left: 30em;
+    top: -12em;
+  }
+}
+
+@media (max-width: 1143px) {
+  .front-float {
+    left: 29em;
+    top: -12em;
+  }
+}
+
+@media (max-width: 1119px) {
+  .front-float {
+    display: none;
+  }
+  .trailer-button {
+    display: inline-block !important;
+  }
+}
