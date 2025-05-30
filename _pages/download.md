@@ -7,7 +7,10 @@ price: "$39.99"
 show_downloads: true
 dl_notice: 
   show: false
-  text: Please note that any purchases are per-seat and are based on if you are editing/creating any actions in an Unreal Editor/Application.
+  text: >-
+    **NOTE**: If you are integrating DeckConnect in a development environment such as in your Unreal application/editor, you will need the UE plugin.  
+    
+    All users will need the Stream Deck Plugin at minimum.
 excerpt: Download options for DeckConnect and purchase FAQ
 pricing_table:
   - name: Stream Deck Plugin
@@ -41,17 +44,25 @@ pricing_table:
       link: /fab
       text: Purchase
 faq:
-  header: Purchase FAQ
+  header: Download/Purchase FAQ
   items:
-    - question: Do I need to purchase?
-      answer: If you are working in development, the answer is yes (unless the application in question has a special bulk redistribution agreement). 
-    - question: Do end users need to purchase DeckConnect?
-      answer: No. End users, such as those that purchase a copy of a game/application from a marketplace, do not need to purchase DeckConnect to use it. They would just need [the free Stream Deck plugin](/deck).
-    - question: What is the software license like?
+    - question: Which download do I need?
       answer: >- 
-        DeckConnect is a code plugin for the Unreal Engine. Please see the [FAB EULA](https://www.fab.com/eula) (specifically sections 2e, 5a, and 5b) for information about code plugin licenses.
+        * If you are working in development, you'll need _both_ of the downloads above.
+
+        * If you're just an end user using an application that has DeckConnect, you can just download the Steam Deck plugin.
+    - question: Will the end users of my application need to purchase DeckConnect?
+      answer: Nope!  
+      
+      
+        End users, such as those that purchase a copy of a game/application from a marketplace, do not need to purchase DeckConnect to use it. They would just need [the free Stream Deck plugin](/deck).
+    - question: What is the software license like?
+      answer: DeckConnect is a code plugin for the Unreal Engine. Please see the [FAB EULA](https://www.fab.com/eula) (specifically sections 2e, 5a, and 5b) for information about code plugin licenses.
     - question: Where can I purchase DeckConnect from?
-      answer: Currently, the only purchase option is from the FAB marketplace. We might expand to other markets in the future. If you have special needs, feel free to [contact us](/contact).
+      answer: Currently, the only purchase option is from the FAB marketplace. We might expand to other markets in the future. 
+      
+
+        If you have special needs (such as bulk offers), feel free to [contact us](/contact).
     - question: What do I get with my purchase?
       answer: Everything in the `Unreal Engine Plugin` section above plus technical support.
     - question: How can I get support for the DeckConnect Unreal Plugin?

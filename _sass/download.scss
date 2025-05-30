@@ -6,6 +6,13 @@
 .downloadtext {
   font-size: small;
 }
+/* Fix a very dumb bug */
+.downloadtext > br {
+	display: none;
+}
+.downloadtext + div {
+	margin-top: 5px !important;
+}
 
 .plans {
 	@extend %flexbox;

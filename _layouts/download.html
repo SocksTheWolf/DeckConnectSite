@@ -8,7 +8,7 @@ layout: splash
 
 {% if page.show_downloads %}
   {% if page.dl_notice.show %}
-    <h4 class="downloadtext text-center">{{ page.dl_notice.text }}</h4>
+    <h4 class="downloadtext text-center">{{ page.dl_notice.text | markdownify | newline_to_br }}</h4>
   {% endif %}
 <div class="plans">
   {% for plan in page.pricing_table %}
