@@ -15,6 +15,7 @@ header:
     width: 500
     height: 300
     provider: "youtube"
+    image: /assets/images/videothumb.webp
   og_image: /assets/images/128x128.png
   overlay_color: "#4182e4"
   overlay_filter: 0.4
@@ -57,6 +58,8 @@ marquee:
     - Debugging
 page_css:
   - /assets/css/jekyll-glossary_tooltip.css
+page_js:
+  - /assets/js/defer-video-player.js
 ---
 
 Control the {% glossary Unreal Engine %} via an Elgato {% glossary Stream Deck %}. Create hundreds of actions to control every aspect of your Unreal Editor or other Unreal based applications.

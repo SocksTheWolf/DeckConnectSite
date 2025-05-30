@@ -19,6 +19,13 @@
 <!-- Courtesy of embedresponsively.com -->
 {% unless video_src == "" %}
   <div class="{% if include.class %}{{include.class}}{%else%}responsive-video-container{%endif%}">
-    <iframe src="{{ video_src }}" {% if include.width %}width="{{include.width}}"{%endif%} {% if include.height %}height="{{include.height}}"{%endif%} frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
+    {% if include.image %}
+      <a href="#" data="{{ video_src }}&autoplay=1" title="Click to play video" data-width="{{include.width}}" data-height="{{include.height}}" class="video-media-thumb" 
+        style="{% if include.width %}width:{{include.width}}px;{%endif%} {% if include.height %}height: {{include.height}}px;{%endif%}">
+        <img src="{{ include.image | absolute_url }}" alt="Click to play video" />
+      </a>
+    {% else %}
+      <iframe src="{{ video_src }}" {% if include.width %}width="{{include.width}}"{%endif%} {% if include.height %}height="{{include.height}}"{%endif%} frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
+    {% endif %}
   </div>
 {% endunless %}
