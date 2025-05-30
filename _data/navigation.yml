@@ -1,5 +1,5 @@
 main:
-  - title: "Setup"
+  - title: "Getting Started"
     url: /setup
     description: "Getting started with DeckConnect"
   - title: "Documentation"
