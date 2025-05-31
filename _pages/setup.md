@@ -3,7 +3,7 @@ title: Getting Started
 layout: bigsingle
 excerpt: "A quick guide to using the DeckConnect plugins"
 permalink: /setup
-redirect_from: /getting-started
+redirect_from: /start
 toc: true
 toc_sticky: true
 toc_label: "Contents"
