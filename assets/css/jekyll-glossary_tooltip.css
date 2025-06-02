@@ -34,7 +34,7 @@
 
 /* Style the source link (if there is one provided in the glossary entry). */
 .jekyll-glossary-source-link:before {
-  content: "[source]";  // "(reference)", "<link>" or whatever you want.
+  content: "[source]";
 }
 
 /* Arrow created with borders. */
