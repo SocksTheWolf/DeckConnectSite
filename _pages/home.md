@@ -16,6 +16,7 @@ header:
     height: 300
     provider: "youtube"
     image: /assets/images/videothumb.webp
+    cutoff: 1119px
   og_image: /assets/images/128x128.png
   overlay_color: "#4182e4"
   overlay_filter: 0.4

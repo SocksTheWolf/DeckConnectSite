@@ -22,7 +22,14 @@
     {% if include.image %}
       <a href="#" data="{{ video_src }}&autoplay=1" title="Click to play video" data-width="{{include.width}}" data-height="{{include.height}}" class="video-media-thumb" 
         style="{% if include.width %}width:{{include.width}}px;{%endif%} {% if include.height %}height: {{include.height}}px;{%endif%}">
-        <img src="{{ include.image | absolute_url }}" alt="Click to play video" />
+        <style>
+          {% if include.cutoff %}@media (min-width: {{include.cutoff}}) { {%endif%}
+            .video_thumb-{{include.id}} {
+              background-image: url({{ include.image | absolute_url }});
+            }
+          {% if include.cutoff %}}{%endif%}
+        </style>
+        <div title="Click to play video" class="video_thumb-{{include.id}}" style="{% if include.width %}min-width:{{include.width}}px;{%endif%} {% if include.height %}min-height: {{include.height}}px;{%endif%}"></div>
       </a>
     {% else %}
       <iframe src="{{ video_src }}" {% if include.width %}width="{{include.width}}"{%endif%} {% if include.height %}height="{{include.height}}"{%endif%} frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
