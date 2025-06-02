@@ -46,10 +46,6 @@ td.center {
   margin-top: 0;
 }
 
-.imgImgUrl { }            /* Marker class, indicates a URL was specified */
-
-.imgFigCaption > a { }    /* Only applies to URLs in captions */
-
 .imgFlex {
   display: flex;
 }
@@ -64,8 +60,6 @@ td.center {
   width: 100%;
 }
 
-.imgPicture > img { }     /* placeholder */
-
 /* Marker class, indicates a caption was specified */
 .imgWrapper {
   margin-bottom: 1em;
@@ -79,10 +73,6 @@ td.center {
 li > .imgWrapper {
   margin-left: 1em;
 }
-/*
-.inline {
-  display: inline-block;
-}*/
 
 .img_error {
   background-color: rgb(248, 149, 149);

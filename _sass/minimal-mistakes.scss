@@ -36,15 +36,6 @@
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
 
-/* Custom libraries */
-@import "mixins/flexbox";
-@import "mixins/columns";
-
 /* Custom classes */
-@import "variables";
 @import "marquee";
-@import "download";
-@import "bigpage";
-@import "splash";
-@import "blueprint";
 @import "misc";

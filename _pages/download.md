@@ -5,6 +5,8 @@ title: Download
 heading: Download
 price: "$39.99"
 show_downloads: true
+page_css:
+  - /assets/css/download.css
 dl_notice: 
   show: false
   text: >-

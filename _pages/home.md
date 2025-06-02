@@ -59,8 +59,9 @@ marquee:
     - Demonstrations
     - Debugging
 inline_page_css:
+  - /assets/css/splash.css
   - /assets/css/jekyll-glossary_tooltip.css
-page_js:
+inline_page_js:
   - /assets/js/defer-video-player.js
 ---
 

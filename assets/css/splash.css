@@ -25,7 +25,7 @@
   }
 }
 
-// full screen video fixes
+/* full screen video fixes */
 :-webkit-full-screen-ancestor {
   .masthead,
   .page__footer {
@@ -58,4 +58,8 @@
   .trailer-button {
     display: inline-block !important;
   }
+}
+
+.mfp-title {
+  display: none !important;
 }

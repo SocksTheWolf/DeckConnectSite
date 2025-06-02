@@ -1,3 +1,9 @@
 <!-- start custom footer snippets -->
-
+{% if page.inline_page_js %}
+  {% for script in page.inline_page_js %}
+    <script type="application/javascript">
+      {% include_file "{{$script}}" %}
+    </script>
+  {% endfor %}
+{% endif %}
 <!-- end custom footer snippets -->
