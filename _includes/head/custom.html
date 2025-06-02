@@ -24,12 +24,12 @@
 
 {% if page.page_js %}
   {% for script in page.page_js %}
-    <script src="{{ script | relative_url }}" defer></script>
+    <script type="application/javascript" src="{{ script | relative_url }}" defer></script>
   {% endfor %}
 {% endif %}
 
 {% if page.header.overlay_image %}
-  <link rel="preload" href="{{ page.header.overlay_image | relative_url }}" as="image" />
+  <link rel="preload" href="{{ page.header.overlay_image | relative_url }}" as="image" fetchpriority="high" />
 {% endif %}
 
 {% if page.robots %}

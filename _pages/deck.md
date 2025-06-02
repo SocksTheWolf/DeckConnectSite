@@ -5,4 +5,6 @@ sitemap: false
 permalink: /deck
 redirect_from: /streamdeck
 search: false
+robots:
+  noindex: true
 ---
