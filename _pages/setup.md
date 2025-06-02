@@ -11,6 +11,7 @@ toc_icon: "cog"
 classes: setup
 inline_page_css:
   - /assets/css/jekyll_img.css
+  - /assets/css/bigpage.css
 header:
   overlay_color: "#4182e4"
 ---

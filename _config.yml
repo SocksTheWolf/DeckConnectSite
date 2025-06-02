@@ -16,7 +16,7 @@
 title: DeckConnect
 masthead_title: DeckConnect
 url: "https://deckconnect.me"
-logo: "/assets/images/44x44.png"
+logo: "/assets/images/88x88.png"
 og_image: "/assets/images/120x120.png"
 subtitle: "Connect Unreal & Elgato together!"
 copyright: SocksTheWolf
@@ -112,6 +112,10 @@ jekyll_compose:
       tags:
         - Unreal
         - Elgato
+
+sass:
+  style: compressed
+  sourcemap: development
 
 jekyll-minifier:
   remove_spaces_inside_tags: false

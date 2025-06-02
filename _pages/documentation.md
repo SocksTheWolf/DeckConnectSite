@@ -12,6 +12,7 @@ header:
   overlay_color: "#4182e4"
 inline_page_css:
   - /assets/css/jekyll_img.css
+  - /assets/css/bigpage.css
 ---
 
 DeckConnect supports a variety of different delegate types to fire, from blueprint delegates, native delegates and just plain lambdas. If it can be coded (either via C++ or  blueprints), it can be used as a response to a DeckConnect Action.
