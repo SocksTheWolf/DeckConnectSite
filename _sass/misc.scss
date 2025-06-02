@@ -21,3 +21,16 @@
     color: $link-color-visited;
   }
 }
+
+.feature_drop {
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.37));
+  position: relative;
+}
+
+.no_feature_wrap_border {
+  border: 0 !important;
+}
+
+.quick-bottom {
+  margin-bottom: 10px !important;
+}
