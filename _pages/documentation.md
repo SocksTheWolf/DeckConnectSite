@@ -374,7 +374,7 @@ If you have any feedback, please feel free to [send a message via the contact fo
 
 #### Elgato
 
-* The port that DeckConnect uses cannot be easily changed.
+No known issues.
 
 ---
 
