@@ -9,7 +9,7 @@ toc_sticky: true
 toc_label: "Contents"
 toc_icon: "cog"
 classes: setup
-page_css:
+inline_page_css:
   - /assets/css/jekyll_img.css
 header:
   overlay_color: "#4182e4"

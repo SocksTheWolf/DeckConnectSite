@@ -9,6 +9,7 @@ gem "minimal-mistakes-jekyll"
 gem "jekyll-paginate-v2"
 gem 'jekyll-liquify'
 gem "jekyll-minifier"
+gem 'jekyll_include_plugin'
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do

@@ -91,6 +91,7 @@ plugins:
   - jekyll-glossary_tooltip
   - jekyll_href
   - jekyll_img
+  - jekyll_include_plugin
   - jekyll-liquify
   - jekyll-minifier
 

@@ -29,6 +29,8 @@ header:
 feature_row:
   border: false
   dropshadow: true
+  img_width: 400
+  img_height: 225
   data:
   - image_path: /assets/images/splash/settingsthumb.webp
     image_path_full: /assets/images/splash/settingsfull.webp
@@ -56,7 +58,7 @@ marquee:
     - Presentations
     - Demonstrations
     - Debugging
-page_css:
+inline_page_css:
   - /assets/css/jekyll-glossary_tooltip.css
 page_js:
   - /assets/js/defer-video-player.js

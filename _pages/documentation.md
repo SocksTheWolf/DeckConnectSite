@@ -10,7 +10,7 @@ permalink: /docs
 classes: docs
 header:
   overlay_color: "#4182e4"
-page_css:
+inline_page_css:
   - /assets/css/jekyll_img.css
 ---
 

@@ -5,7 +5,7 @@ excerpt: How to change DeckConnect's Connection Settings
 tags:
   - Unreal
   - Elgato
-page_css:
+inline_page_css:
   - /assets/css/jekyll_img.css
 ---
 
