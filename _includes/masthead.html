@@ -7,9 +7,12 @@
         {% if page.skip_header %}
         {% else %}
           {% unless logo_path == empty %}
-            <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title | append: ' Logo'}}"></a>
+            {%- capture logo_title -%}
+              {{ site.masthead_title | default: site.title | append: ' Logo' }}
+            {%- endcapture -%}
+            <a class="site-logo" title="{{ logo_title }}" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ logo_title }}"></a>
           {% endunless %}
-          <a class="site-title" href="{{ '/' | relative_url }}">
+          <a class="site-title" title="{{ site.masthead_title }}" href="{{ '/' | relative_url }}">
             {{ site.masthead_title | default: site.title }}
             {% if site.subtitle and page.hide_subtitle != true %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
           </a>
