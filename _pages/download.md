@@ -28,8 +28,9 @@ pricing_table:
         highlight: false
     call_to_action:
       can_use: true
+      image: /assets/images/elgato-marketplace.png
       link: /deck
-      text: Download
+      title: "Get DeckConnect on Elgato Marketplace"
   - name: Unreal Engine Plugin
     color: "#3468b6"
     features:
@@ -43,8 +44,9 @@ pricing_table:
         highlight: false
     call_to_action:
       can_use: true
+      image: /assets/images/fab-marketplace.png
       link: /fab
-      text: Purchase
+      title: "Get DeckConnect on FAB"
 faq:
   header: Download/Purchase FAQ
   items:

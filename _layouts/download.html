@@ -17,17 +17,29 @@ layout: splash
         <h3>{{ plan.name }}</h3>
       </li>
       {% for feature in plan.features %}
-        <li {% if feature.highlight %} class="highlighted"{% endif %}>{{ feature.text | liquify | markdownify }}</li>
+        <li {% if feature.highlight %}class="highlighted"{% endif %}>{{ feature.text | liquify | markdownify }}</li>
       {% endfor %}
 
       {% if plan.call_to_action %}
         <li class="pricing-cta" style="background: {{ plan.color }}">
           <div class="button">
-            {% if plan.call_to_action.can_use %}
-              <a rel="nofollow" href="{{ plan.call_to_action.link }}">{{ plan.call_to_action.text }} &rarr;</a>
-            {% else %}
-              <span>Coming Soon!</span>
-            {% endif %}
+          {% unless plan.call_to_action.can_use %}
+            <span>Coming Soon!</span>
+          {% else %}
+            {%- capture title -%}
+              {{ plan.call_to_action.title | default: plan.name }}
+            {%- endcapture -%}
+            <a rel="nofollow" title="{{ title }}" href="{{ plan.call_to_action.link }}">
+              {% if plan.call_to_action.image %}
+                <img 
+                  alt="{{ title }}"
+                  src="{{ plan.call_to_action.image | absolute_url }}"
+                />
+              {% else %}
+                {{ plan.call_to_action.text }} &rarr;
+              {% endif %}
+            </a>
+          {% endunless %}
           </div>
         </li>
       {% endif %}

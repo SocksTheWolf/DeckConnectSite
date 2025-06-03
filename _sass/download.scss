@@ -66,8 +66,9 @@ $desktop: "(min-width: 768px)";
 
 		.pricing-cta {
 			padding: 0;
+			height: 65px;
 
-			* {
+			a {
 				display: block;
 				box-sizing: border-box;
 				padding: 15px 0;
