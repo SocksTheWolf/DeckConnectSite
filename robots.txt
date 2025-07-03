@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /assets/css
+Disallow: /assets/js
+Disallow: /analytics
+Disallow: /cdn-cgi
+
+Sitemap: https://deckconnect.me/sitemap.xml
