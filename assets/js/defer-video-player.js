@@ -5,6 +5,6 @@ document.querySelectorAll(".video-media-thumb").forEach(el => {
     const dataURL = el.getAttribute("data");
     const vidW = el.getAttribute("data-width");
     const vidH = el.getAttribute("data-height");
-    el.parentElement.innerHTML = `<iframe src="${dataURL}" width="${vidW}" height="${vidH}" title="Video Player" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>`;
+    el.parentElement.innerHTML = `<iframe src="${dataURL}" width="${vidW}" height="${vidH}" title="Video Player" allow="autoplay; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>`;
   });
 });
