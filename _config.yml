@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: DeckConnect
 masthead_title: DeckConnect
-url: "https://deckconnect.me"
+url: https://deckconnect.me
 logo: "/assets/images/88x88.png"
 og_image: "/assets/images/120x120.png"
 subtitle: "Connect Unreal & Elgato together!"
@@ -94,6 +94,7 @@ plugins:
   - jekyll_include_plugin
   - jekyll-liquify
   - jekyll-minifier
+  - jekyll-hostname
 
 plugin_loggers:
   PluginMetaLogger: fatal

@@ -1,13 +1,24 @@
 {% capture video_id %}{{ include.id }}{% endcapture %}
 {% capture video_provider %}{{ include.provider }}{% endcapture %}
 {% capture video_danmaku %}{{ include.danmaku | default: 0 }}{% endcapture %}
+{% assign origin = site.url | hostname %}
+
+{% capture video_policy %}
+  {% case origin %}
+  {% when "localhost" %}
+    unsafe-url
+  {% else %}
+    strict-origin-when-cross-origin
+  {% endcase %}
+{% endcapture %}
+{% assign video_policy = video_policy | strip %}
 
 {% capture video_src %}
   {% case video_provider %}
   {% when "vimeo" %}
     https://player.vimeo.com/video/{{ video_id }}?dnt=true
   {% when "youtube" %}
-    https://www.youtube-nocookie.com/embed/{{ video_id }}?playlist={{ video_id }}&controls=0&loop=1&rel=0
+    https://www.youtube-nocookie.com/embed/{{ video_id }}?playlist={{ video_id }}&loop=1&rel=0&iv_load_policy=3
   {% when "google-drive" %}
     https://drive.google.com/file/d/{{ video_id }}/preview
   {% when "bilibili" %}
@@ -20,7 +31,7 @@
 {% unless video_src == "" %}
   <div class="{% if include.class %}{{include.class}}{%else%}responsive-video-container{%endif%}">
     {% if include.image %}
-      <a href="#" data="{{ video_src }}&autoplay=1" title="Click to play video" data-width="{{include.width}}" data-height="{{include.height}}" class="video-media-thumb" 
+      <a href="#" data="{{ video_src }}&controls=0&autoplay=1&enablejsapi=1&origin={{site.url}}&playsinline=1" title="Click to play video" data-policy="{{video_policy}}" data-videoid="{{video_id}}" data-width="{{include.width}}" data-height="{{include.height}}" class="video-media-thumb" 
         style="{% if include.width %}width:{{include.width}}px;{%endif%} {% if include.height %}height: {{include.height}}px;{%endif%}">
         <style>
           {% if include.cutoff %}@media (min-width: {{include.cutoff}}) { {%endif%}
@@ -32,7 +43,7 @@
         <div title="Click to play video" class="video_thumb-{{include.id}}" style="{% if include.width %}min-width:{{include.width}}px;{%endif%} {% if include.height %}min-height: {{include.height}}px;{%endif%}"></div>
       </a>
     {% else %}
-      <iframe src="{{ video_src }}" {% if include.width %}width="{{include.width}}"{%endif%} {% if include.height %}height="{{include.height}}"{%endif%} frameborder="0" referrerpolicy="strict-origin-when-cross-origin" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe src="{{ video_src }}" {% if include.width %}width="{{include.width}}"{%endif%} {% if include.height %}height="{{include.height}}"{%endif%} frameborder="0" referrerpolicy="{{video_policy}}" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
     {% endif %}
   </div>
 {% endunless %}
