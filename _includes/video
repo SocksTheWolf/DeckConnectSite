@@ -32,7 +32,7 @@
         <div title="Click to play video" class="video_thumb-{{include.id}}" style="{% if include.width %}min-width:{{include.width}}px;{%endif%} {% if include.height %}min-height: {{include.height}}px;{%endif%}"></div>
       </a>
     {% else %}
-      <iframe src="{{ video_src }}" {% if include.width %}width="{{include.width}}"{%endif%} {% if include.height %}height="{{include.height}}"{%endif%} frameborder="0" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe src="{{ video_src }}" {% if include.width %}width="{{include.width}}"{%endif%} {% if include.height %}height="{{include.height}}"{%endif%} frameborder="0" referrerpolicy="strict-origin-when-cross-origin" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>
     {% endif %}
   </div>
 {% endunless %}
