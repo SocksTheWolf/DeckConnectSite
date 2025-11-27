@@ -52,7 +52,7 @@ jobs:
           onlyRemoveDeployments: true
           onlyDeactivateDeployments: false
       - name: Cleanup Pages Actions
-        uses: igorjs/gh-actions-clean-workflow@v6
+        uses: igorjs/gh-actions-clean-workflow@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           runs_to_keep: 1
