@@ -78,6 +78,7 @@ exclude:
   - .github/
   - LICENSE
   - README.md
+  - .markdownlint.json
 
 # Plugins (previously gems:)
 plugins:
