@@ -59,6 +59,9 @@ include:
   - _pages
   - favicon.ico
 
+sass:
+  style: compressed
+
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
@@ -79,6 +82,9 @@ exclude:
   - LICENSE
   - README.md
   - .markdownlint.json
+  - node_modules/
+  - package.json
+  - package-lock.json
 
 # Plugins (previously gems:)
 plugins:

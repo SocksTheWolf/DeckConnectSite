@@ -64,6 +64,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
+      - name: Setup node
+        uses: actions/setup-node@v6
+        with:
+          cache: "npm"
+          node-version: "24.11.1"
+          package-manager-cache: true
+      - name: Node Package Install
+        run: npm install
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
         uses: ruby/setup-ruby@v1.268.0
@@ -79,6 +87,17 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+      - name: Purge CSS
+        if: success()
+        # idk why but the output directory is much different than what it is on windows
+        # this should fix all of it though
+        run: npx purgecss -v --css assets/css/*.css --content "_site/**.html" --output _site/assets/css
+      - name: Sanity check
+        if: success()
+        run: ls -lha _site/assets/css
+      - name: No Maps
+        if: success()
+        run: echo "" > _site/assets/css/main.css.map
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v4
