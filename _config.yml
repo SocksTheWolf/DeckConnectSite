@@ -40,6 +40,16 @@ atom_feed:
 lunr:
   search_within_pages: true
 
+# feeds
+feed:
+  collections:
+    posts:
+      path: "/feed.xml"
+      categories:
+        - updates
+  categories:
+    - tips
+
 # Outputting
 permalink: pretty
 pagination:
@@ -140,7 +150,6 @@ social:
   creator: "Person"
   name: "SocksTheWolf"
   url: "https://socksthewolf.com"
-
 
 author:
   name   : "SocksTheWolf"
