@@ -127,6 +127,8 @@ sass:
 jekyll-minifier:
   remove_spaces_inside_tags: false
   compress_css: true
+  uglifier_args:
+    harmony: true
   exclude: 
     - 'sitemap.xml'
     - 'ueblueprint.min.js'
