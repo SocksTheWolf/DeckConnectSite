@@ -180,7 +180,7 @@ if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
 
 **Blueprint**:
 
-{% img lazy style="max-width: 678px" src='/assets/images/reference/Connect.png' alt='Calling Connect to Stream Deck' wrapper_class="center" size="75%" %}
+{% img lazy style="max-width: 678px" src='/assets/images/reference/Connect.png' alt='Calling Connect to Stream Deck' wrapper_class="center" wrapper_style="width: 75%" %}
 
 ---
 
