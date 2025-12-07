@@ -53,7 +53,8 @@ You will have the option to name the Action, as well as setting it's execution r
 Unique names are *heavily recommended* to make your actions easier to find.
 {: .notice--primary}
 
-If your action is going to run independently of any running game instance, you can check the `Run on Any Thread` option. However, the necessity to do so is rare.
+If your action does not need a reference to any Unreal object (like certain Editor Subsystems), you can check the `Run on Any Thread` box.
+However, there is rarely the necessity to do so, it is provided for advanced configuration.
 
 ### Step 3: Hook our new Action to an Event
 
@@ -85,7 +86,7 @@ Our final Blueprint looks like this:
 {% img lazy src='/assets/images/setup/unreal/Output.png' alt='Final Blueprint Graph' wrapper_class="center" size="75%" %}  
 
 {:start="7"}
-7. Now whenever the user presses the button, they'll will be pressented with the message "Hello"!  
+7. Now whenever the user presses the button, they'll will be presented with the message "Hello"!  
 
 {% img lazy src='/assets/images/setup/unreal/Result.png' alt='Output upon pressing button' wrapper_class="center" size="halfsize" %}  
 
@@ -96,7 +97,7 @@ To set up other types of events (like in C++), check out [the documentation page
 
 ## Stream Deck Plugin Setup
 
-This step requires that you have downloaded and installed the DeckConnect Plugin from [Elgato Marketplace](/deck). Once this prerequistite has completed, continue with the steps below.
+This step requires that you have downloaded and installed the DeckConnect Plugin from [Elgato Marketplace](/deck). Once this prerequisite has completed, continue with the steps below.
 
 ### Step 1: Add a new Stream Deck Button
 

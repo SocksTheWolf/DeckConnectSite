@@ -3,7 +3,7 @@ main:
     url: /setup
     description: "Getting started with DeckConnect"
   - title: "Documentation"
-    decription: "DeckConnect's Technical documentation"
+    description: "DeckConnect's Technical documentation"
     url: /docs
   - title: "Updates"
     url: /updates

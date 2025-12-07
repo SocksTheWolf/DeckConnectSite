@@ -29,7 +29,7 @@ Throughout this document, you may see some new terms:
 
 * `Button` - A physical button on a Stream Deck.
 * `Action` - Definition data. Actions are created and maintained in Unreal DeckConnect plugin, they are assigned to buttons using the Stream Deck application.
-* `GUID`/`Action GUID` - The internal indentifer for a given Action.
+* `GUID`/`Action GUID` - The internal identifier for a given Action.
 * `Name`/`Action Name` - Human readable string that can be used to find a given Action. It is marginally slower to query actions using this method, but not by much.
 
 ## Reference
@@ -367,14 +367,7 @@ If you have any feedback, please feel free to [send a message via the contact fo
 
 ---
 
-#### Unreal
-
-* Copy/Pasting Data values other than Name in the DeckConnect settings window does nothing. This is intentional to prevent disasterous data loss. If you want to share actions, copy and paste the actions from the config file instead.
-* Versions earlier than 1.00.07 will append a 0 at the end of any DeckConnect Action name incorrectly. This is fixed in latest versions.
-
-#### Elgato
-
-No known issues.
+{% include issues.html %}
 
 ---
 
@@ -385,3 +378,4 @@ You can find additional information here as well:
 * [Updates & Changes](/updates)
 * [Usage Tips](/tips)
 * [Examples](/examples)
+* [Known Issues](/known-issues)

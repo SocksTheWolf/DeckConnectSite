@@ -1,0 +1,15 @@
+{% for source in site.data.issues.source %}
+  <h2 id="{{ source.id | default: source.name | slugify }}">{{ source.name }}</h2>
+  <ul>
+    {% for issue in source.issues %}
+    <li><strong>Issue</strong>: {{ issue.problem | markdownify | remove: '<p>' | remove: '</p>' }}
+      {% if issue.solution %}
+        <ul>
+          <li><strong>Solution</strong>: {{ issue.solution | markdownify }}</li>
+        </ul>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+{% endfor %}
+    
