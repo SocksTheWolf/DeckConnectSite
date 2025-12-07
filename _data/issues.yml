@@ -1,11 +1,18 @@
 source:
   - name: Unreal
+    id: unreal
     issues:
-      - problem: Copy/Pasting Data values other than Name in the DeckConnect settings window does nothing. This is intentional to prevent disastrous data loss.
+      - problem: |
+          Copy/Pasting Data values other than Name in the DeckConnect settings window does nothing.  
+          This is intentional to prevent disastrous data loss.
         solution: If you want to share actions, copy and paste the actions from the config file instead.
-      - problem: Versions earlier than `1.00.07` will append a "0" at the end of any DeckConnect Action name incorrectly.
-        solution: This is fixed in latest versions.
-  - name: Elgato
+      - problem: A `0` character is appended to the end of a DeckConnect Action name.
+        solution: Update to the latest version
+        fixed_in: 1.00.07
+  - name: Elgato Streamdeck
+    id: streamdeck
     issues:
-      - problem: On first install of the Elgato plugin, the _very first_ action button in the Stream Deck software will not work.
-        solution: This is fixed by simply recreating the action button in the Stream Deck application. Only the first button exhibits this behavior.
+      - problem: On first install of the Elgato plugin, the _very first_ action button in the Stream Deck software may not work.
+        workaround: |
+          This is fixed by simply recreating the action button in the Stream Deck application.  
+          _Only the first button_ appears to exhibit this behavior.

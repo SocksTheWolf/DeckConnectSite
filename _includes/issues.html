@@ -1,15 +1,22 @@
 {% for source in site.data.issues.source %}
   <h2 id="{{ source.id | default: source.name | slugify }}">{{ source.name }}</h2>
-  <ul>
+  <ol>
     {% for issue in source.issues %}
     <li><strong>Issue</strong>: {{ issue.problem | markdownify | remove: '<p>' | remove: '</p>' }}
-      {% if issue.solution %}
+      {% if issue.solution or issue.fixed_in or issue.workaround %}
         <ul>
-          <li><strong>Solution</strong>: {{ issue.solution | markdownify }}</li>
+          {%if issue.workaround %}
+            <li><strong>Workaround</strong>: {{ issue.workaround | markdownify |  remove: '<p>' | remove: '</p>' }}</li>
+          {% elsif issue.solution %}
+            <li><strong><u>Solution</u></strong>: {{ issue.solution | markdownify |  remove: '<p>' | remove: '</p>' }}</li>
+          {% endif %}
+          {% if issue.fixed_in %}
+            <small><i>Fixed In: {{ issue.fixed_in }}</i></small>
+          {% endif %}
         </ul>
       {% endif %}
     </li>
     {% endfor %}
-  </ul>
+  </ol>
 {% endfor %}
     

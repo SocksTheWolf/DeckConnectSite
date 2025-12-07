@@ -10,23 +10,19 @@ gem "base64"
 gem "csv"
 gem "json"
 gem "minimal-mistakes-jekyll"
-gem "jekyll-paginate-v2"
-gem "jekyll-liquify"
-gem "jekyll-minifier"
-gem "jekyll_include_plugin"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-sitemap"
-  gem "jekyll-gist"
   gem "jekyll-feed"
   gem "jekyll-redirect-from"
-  gem "jemoji"
+  gem "jekyll-paginate-v2"
+  gem "jekyll-liquify"
+  gem "jekyll-minifier"
+  gem "jekyll_include_plugin"
   gem "jekyll-include-cache"
-  gem "jekyll-algolia"
   gem "jekyll_img"
-  gem "jekyll-compose"
-  gem "jekyll_href"
   gem "jekyll-glossary_tooltip"
   gem "jekyll-hostname"
+  gem 'jekyll_href', '~> 3.0', '>= 3.0.2'
 end

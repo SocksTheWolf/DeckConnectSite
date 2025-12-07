@@ -47,8 +47,6 @@ feed:
       path: "/feed.xml"
       categories:
         - updates
-  categories:
-    - tips
 
 # Outputting
 permalink: pretty
@@ -80,7 +78,6 @@ exclude:
   - vendor/gems/
   - vendor/ruby/
   - _site
-  - _drafts
   - .vscode/
   - CNAME
   - bp/
@@ -96,9 +93,7 @@ exclude:
 plugins:
   - jekyll-paginate-v2
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
-  - jemoji
   - jekyll-include-cache
   - jekyll-redirect-from
   - jekyll-glossary_tooltip
@@ -112,20 +107,6 @@ plugins:
 plugin_loggers:
   PluginMetaLogger: fatal
   ImgError: error
-  IfDraftError: fatal
-  DraftHtmlError: fatal
-
-jekyll_compose:
-  default_front_matter:
-    posts:
-      layout: single
-      author_sidebar: false
-      excerpt: An Update Post Regarding DeckConnect
-      categories:
-        - Updates
-      tags:
-        - Unreal
-        - Elgato
 
 sass:
   style: compressed
@@ -134,8 +115,6 @@ sass:
 jekyll-minifier:
   remove_spaces_inside_tags: false
   compress_css: true
-  uglifier_args:
-    harmony: true
   exclude: 
     - 'sitemap.xml'
     - 'ueblueprint.min.js'
