@@ -18,10 +18,10 @@ masthead_title: DeckConnect
 url: https://deckconnect.me
 logo: "/assets/images/88x88.png"
 og_image: "/assets/images/120x120.png"
-subtitle: "Connect Unreal & Elgato together!"
+subtitle: "Connect a Streamdeck and Unreal together!"
 copyright: SocksTheWolf
 copyright_url: https://socksthewolf.com
-description: >- # this means to ignore newlines until "baseurl:"
+description: >- # this means to ignore newlines until next config
   DeckConnect empowers your workflow with the Unreal Engine using
   an Elgato Stream Deck. Connect the two together and control your
   Unreal Application or Editor directly from your device!

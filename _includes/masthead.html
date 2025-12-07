@@ -10,7 +10,7 @@
             {%- capture logo_title -%}
               {{ site.masthead_title | default: site.title | append: ' Logo' }}
             {%- endcapture -%}
-            <a class="site-logo" title="{{ logo_title }}" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ logo_title }}"></a>
+            <a class="site-logo" title="{{ logo_title }}" href="{{ '/' | relative_url }}"><img style="max-width: 44px" src="{{ logo_path | relative_url }}" alt="{{ logo_title }}"></a>
           {% endunless %}
           <a class="site-title" title="{{ site.masthead_title }}" href="{{ '/' | relative_url }}">
             {{ site.masthead_title | default: site.title }}
