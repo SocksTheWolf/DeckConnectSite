@@ -116,8 +116,7 @@ jobs:
       - name: Purge CSS
         if: success()
         # idk why but the output directory is much different than what it is on windows
-        # this should fix all of it though
-        run: npx purgecss -v --css assets/css/*.css --content "_site/**.html" --output _site/assets/css
+        run: npm run purge-ci 
       - name: Sanity check
         if: success()
         run: ls -lha _site/assets/css
