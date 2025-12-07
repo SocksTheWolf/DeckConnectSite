@@ -141,7 +141,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Cloudflare Cache Cleaner
-        if: ${{ success() && (needs.build.outputs.cache_clear == 'true' || inputs.clear_cache == 'true') }}
+        if: needs.build.outputs.cache_clear == 'true' || inputs.clear_cache == 'true'
         uses: socksthewolf/action-cloudflare-cache@main
         with:
           zone: ${{ secrets.CLOUDFLARE_ZONE }}
