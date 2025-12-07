@@ -140,7 +140,7 @@ jobs:
         uses: actions/deploy-pages@v4
       - name: Cloudflare Cache Cleaner
         if: needs.build.outputs.cache_clear == 'true' || inputs.clear_cache == 'true'
-        uses: socksthewolf/action-cloudflare-cache@fix
+        uses: socksthewolf/action-cloudflare-cache@main
         with:
           zone: ${{ secrets.CLOUDFLARE_ZONE }}
           api_token: ${{ secrets.CLOUDFLARE_TOKEN }}
