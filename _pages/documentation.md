@@ -383,4 +383,4 @@ You can find additional information here as well:
 * [Updates & Changes](/updates)
 * [Usage Tips](/tips)
 * [Examples](/examples)
-* [Known Issues](/known-issues)
+* [Known Issues](/issues)

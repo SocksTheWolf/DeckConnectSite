@@ -1,6 +1,6 @@
 ---
 title: Known Issues
-permalink: /known-issues
+permalink: /issues
 excerpt: "Currently known issues with DeckConnect"
 search: true
 ---
