@@ -74,8 +74,6 @@ jobs:
       - name: Dependency Update Check
         uses: dorny/paths-filter@v3.0.2
         id: filter
-        # Don't run if we're workflow_dispatch
-        if: ${{ github.event_name != 'workflow_dispatch' }}
         with:
           base: ${{ github.ref }}
           filters: |
