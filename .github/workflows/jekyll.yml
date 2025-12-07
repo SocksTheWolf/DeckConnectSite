@@ -71,7 +71,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v6
-      - name: Dependency Update Check
+      - name: Cache Clear Check
         uses: dorny/paths-filter@v3.0.2
         id: filter
         with:
@@ -85,6 +85,7 @@ jobs:
               - '_includes/feature_row'
               - '_includes/marquee'
               - '_config.yml'
+              - '_data/**.yml'
               - 'Gemfile'
               - 'robots.txt'
               - 'assets/**'
