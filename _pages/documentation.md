@@ -50,7 +50,7 @@ UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get();
 
 Look for the Blueprint Node `Get DeckConnectSubsystem` as seen below.
 
-{% img lazy max-width="584px" src='/assets/images/reference/GetDeckConnectSubsystem.png' alt='Getting the Subsystem' wrapper_class="center" size="halfsize" %}
+{% img lazy max_width="584px" src='/assets/images/reference/GetDeckConnectSubsystem.png' alt='Getting the Subsystem' wrapper_class="center" size="halfsize" %}
 
 ---
 
@@ -106,7 +106,7 @@ Registering is provided via a widget called `Register DeckConnect Function`, thi
 
 A more advanced option if you already know the internal GUID of an Action, is to use `Register DeckConnect Function By GUID` blueprint node. It's not advised as there's more room for potential error, but it is imperceptibly faster to use.
 
-{% img lazy max-width="706px" src='/assets/images/reference/RegisterFunction.png' alt='Registering Functions' wrapper_class="center" size="halfsize" %}
+{% img lazy max_width="706px" src='/assets/images/reference/RegisterFunction.png' alt='Registering Functions' wrapper_class="center" size="halfsize" %}
 
 ---
 
@@ -149,7 +149,7 @@ FDeckConnect::LaunchDownload();
 
 **Blueprint**:
 
-{% img lazy max-width="625px" src='/assets/images/reference/PluginDownloadWidget.png' wrapper_class="center" alt='Search for DeckConnect to find this faster' size="75%" %}
+{% img lazy max_width="625px" src='/assets/images/reference/PluginDownloadWidget.png' wrapper_class="center" alt='Search for DeckConnect to find this faster' size="75%" %}
 
 ---
 
@@ -180,7 +180,7 @@ if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
 
 **Blueprint**:
 
-{% img lazy max-width="678px" src='/assets/images/reference/Connect.png' alt='Calling Connect to Stream Deck' wrapper_class="center" size="75%" %}
+{% img lazy max_width="678px" src='/assets/images/reference/Connect.png' alt='Calling Connect to Stream Deck' wrapper_class="center" size="75%" %}
 
 ---
 
@@ -200,7 +200,7 @@ if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
 
 **Blueprint**:
 
-{% img lazy max-width="624px" src='/assets/images/reference/Disconnect.png' alt='Calling Disconnect to Stream Deck' wrapper_class="center" size="75%" %}
+{% img lazy max_width="624px" src='/assets/images/reference/Disconnect.png' alt='Calling Disconnect to Stream Deck' wrapper_class="center" size="75%" %}
 
 ---
 
@@ -221,7 +221,7 @@ if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
 
 **Blueprint**:
 
-{% img lazy max-width="842px" src='/assets/images/reference/IsConnected.png' alt='Calling IsConnected to Stream Deck' wrapper_class="center" size="75%" %}
+{% img lazy max_width="842px" src='/assets/images/reference/IsConnected.png' alt='Calling IsConnected to Stream Deck' wrapper_class="center" size="75%" %}
 
 ---
 
@@ -305,7 +305,7 @@ if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
 
 Use the `Get GUID for Name` node like below. Make sure to check the validity of the return value.
 
-{% img lazy max-width="1272px" src='/assets/images/reference/GetGUIDForName.png' alt='Getting an Action GUID for the given Name' wrapper_class="center" size="75%" %}
+{% img lazy max_width="1272px" src='/assets/images/reference/GetGUIDForName.png' alt='Getting an Action GUID for the given Name' wrapper_class="center" size="75%" %}
 
 ---
 
@@ -330,7 +330,7 @@ if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
 
 Use the `Get Name for GUID` node. Checking for `NAME_None` is a little wacky, so it's advised to call [DoesActionExist](#doesactionexist) first.
 
-{% img lazy max-width="1180px" src='/assets/images/reference/GetNameForGUID.png' alt='Getting an Action Name for the given GUID' wrapper_class="center" size="75%" %}
+{% img lazy max_width="1180px" src='/assets/images/reference/GetNameForGUID.png' alt='Getting an Action Name for the given GUID' wrapper_class="center" size="75%" %}
 
 ---
 
@@ -358,7 +358,7 @@ if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
 
 Both methods are also accessible from Blueprint.
 
-{% img lazy max-width="1231px" src='/assets/images/reference/DoesActionExist.png' alt='Getting if an Action exists' wrapper_class="center" size="75%" %}
+{% img lazy max_width="1231px" src='/assets/images/reference/DoesActionExist.png' alt='Getting if an Action exists' wrapper_class="center" size="75%" %}
 
 ---
 

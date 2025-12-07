@@ -15,13 +15,13 @@ By default, DeckConnect communicates over port `32420`, however this port value 
 
 In the Stream Deck settings page, there's an option for "Global Settings" (if you do not see this value, make sure you have updated!)
 
-{% img lazy max-width="563px" src='/assets/images/changingports/DeckConnectSettings.png' alt='DeckConnect Stream Deck Settings' wrapper_class="center" %}
+{% img lazy max_width="563px" src='/assets/images/changingports/DeckConnectSettings.png' alt='DeckConnect Stream Deck Settings' wrapper_class="center" %}
 
 ---
 
 Clicking that option will bring you to the Global Settings page:
 
-{% img lazy max-width="563px" src='/assets/images/changingports/SettingsOptions.png' alt='Settings Options' wrapper_class="center" %}
+{% img lazy max_width="563px" src='/assets/images/changingports/SettingsOptions.png' alt='Settings Options' wrapper_class="center" %}
 
 1. `Server Port` - This will automatically populate with whatever your current port value is upon loading into the settings page
 2. `Set and Restart` - Whenever you change the value of the port, it does not apply immediately, you must click this button to restart DeckConnect.
@@ -33,7 +33,7 @@ Typing values into the port field will change the icon on the right side based o
 
 Upon hitting `Set and Restart`, a DeckConnect restart message will appear.
 
-{% img lazy max-width="383px" src='/assets/images/changingports/ServerRestartFail.png' alt='Server Restart Message' wrapper_class="center" %}
+{% img lazy max_width="383px" src='/assets/images/changingports/ServerRestartFail.png' alt='Server Restart Message' wrapper_class="center" %}
 
 This message will either say `Success` or `Fail` based on if the setting could be saved and the server restarting successfully.
 
@@ -44,7 +44,7 @@ If the setting didn't change from what it was originally, then the server will f
 
 The Unreal Plugin is a bit more straight-forward, as in 99% of the cases, you only need to update the port setting and DeckConnect will take care of it for you. Open Plugin settings for DeckConnect (found in Project Settings) and scroll all the way down to the `Connection` section of the settings.
 
-{% img lazy max-width="500px" src='/assets/images/changingports/UnrealConnectionSettings.png' alt='Unreal Connection Settings for DeckConnect' wrapper_class="center" %}
+{% img lazy max_width="500px" src='/assets/images/changingports/UnrealConnectionSettings.png' alt='Unreal Connection Settings for DeckConnect' wrapper_class="center" %}
 You can leave the IP address as `127.0.0.1` (the default) unless you are working with machines across the network (like I am in the screenshot above).
 {: .notice--warning}
 

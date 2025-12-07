@@ -66,6 +66,8 @@ jobs:
   build:
     needs: cleanup
     runs-on: ubuntu-latest
+    outputs:
+      cache_clear: ${{ steps.filter.outputs.clear_cache }}
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -137,7 +139,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
       - name: Cloudflare Cache Cleaner
-        if: steps.filter.outputs.clear_cache == 'true' || inputs.clear_cache == 'true'
+        if: needs.build.outputs.cache_clear == 'true' || inputs.clear_cache == 'true'
         uses: Cyb3r-Jak3/action-cloudflare-cache@v2.0.0
         with:
           zone: ${{ secrets.CLOUDFLARE_ZONE }}
