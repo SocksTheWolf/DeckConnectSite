@@ -5,6 +5,7 @@ gem 'webrick', '~> 1.9', '>= 1.9.1'
 gem 'tzinfo', '~> 2.0.6'
 gem 'tzinfo-data', '~> 1.2025.2'
 gem "wdm", "~> 0.1.0" if Gem.win_platform?
+gem "jekyll-sass-converter", "~> 2.2.0"
 gem "base64"
 gem "csv"
 gem "json"
