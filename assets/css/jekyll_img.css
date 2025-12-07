@@ -10,19 +10,24 @@ td.center {
   display: table-cell;
 }
 
-.eighthsize {
+.max_eighthsize, .eighthsize {
   height: auto;
   width: 12.5%;
 }
 
-.fullsize {
+.max_fullsize, .fullsize {
   height: auto;
   width: 100%;
 }
 
-.halfsize {
+.max_halfsize, .halfsize {
   height: auto;
   width: 50%;
+}
+
+.max_quartersize, .quartersize {
+  height: auto;
+  width: 25%;
 }
 
 .imgBlock {
@@ -94,11 +99,6 @@ li > .imgWrapper {
 .left {
   float: left;
   margin-right: 1em;
-}
-
-.quartersize {
-  height: auto;
-  width: 25%;
 }
 
 .right {
