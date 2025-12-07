@@ -84,12 +84,19 @@ Unless you are binding raw lambdas (i.e. not using delegates) in game code, you 
 
 if (UDeckConnectSubsystem* dc = FDeckConnect::Get()) {
 
+  // Raw lambda version
   FDeckActionDelegateHandle Handle = dc->Register(FName(TEXT("Example")), [this]() {
     /* Some code to fire when the Button is pressed */
   });
 
+  // OR
+
+  // Delegate version, the first parameter can be a FName or a FGuid.
   dc->Register(FGuid(...), 
     FDeckActionDelegate::CreateUObject(this, &AClass::OnActionCallback));
+
+  dc->Register(FName(TEXT("ActionNameFromSettings")), 
+    FDeckActionDelegate::CreateUObject(this, &AClass::OnDifferentActionCallback));
 }
 ```
 
@@ -272,9 +279,7 @@ if (UDeckConnectSubsystem* DeckConnect = FDeckConnect::Get()) {
     /* Code to execute */
   });
   if (DeckConnect->IsDelegateHandleValid(Handle))
-  {
     UE_LOG(LogTemp, Log, TEXT("Action has a bound function!"));
-  }
 }
 ```
 

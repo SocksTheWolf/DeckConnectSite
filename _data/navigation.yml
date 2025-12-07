@@ -3,14 +3,14 @@ main:
     url: /setup
     description: "Getting started with DeckConnect"
   - title: "Documentation"
-    description: "DeckConnect's Technical documentation"
+    description: "DeckConnect technical documentation"
     url: /docs
   - title: "Updates"
     url: /updates
-    description: "Posts about DeckConnect's updates and news."
+    description: "Posts about DeckConnect updates and news"
   - title: "Download"
     url: /download
-    description: "DeckConnect downloads"
+    description: "Downloading & Installing DeckConnect"
   - title: "Contact"
     description: "Contact page"
     url: /contact
