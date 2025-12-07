@@ -74,7 +74,7 @@ jobs:
         run: npm install
       - name: Setup Ruby
         # https://github.com/ruby/setup-ruby/releases/tag/v1.207.0
-        uses: ruby/setup-ruby@v1.268.0
+        uses: ruby/setup-ruby@v1.269.0
         with:
           ruby-version: '3.2.2' # Not needed with a .ruby-version file
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
