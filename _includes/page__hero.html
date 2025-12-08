@@ -48,7 +48,7 @@
         </p>
       {% endif %}
       {% if page.header.video %}
-        {% include video id=page.header.video.id image=page.header.video.image class=page.header.video.class provider=page.header.video.provider width=page.header.video.width height=page.header.video.height cutoff=page.header.video.cutoff %}
+        {% include_cached video id=page.header.video.id image=page.header.video.image class=page.header.video.class provider=page.header.video.provider width=page.header.video.width height=page.header.video.height cutoff=page.header.video.cutoff %}
       {% endif %}
     </div>
     {% if page.marquee %}

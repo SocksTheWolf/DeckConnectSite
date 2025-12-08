@@ -7,4 +7,4 @@ search: true
 
 This is a list of the currently known issues with the DeckConnect software separated by where the plugin is installed.
 
-{% include issues.html %}
+{% include_cached issues.html %}

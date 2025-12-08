@@ -372,7 +372,7 @@ If you have any feedback, please feel free to [send a message via the contact fo
 
 ---
 
-{% include issues.html %}
+{% include_cached issues.html %}
 
 ---
 

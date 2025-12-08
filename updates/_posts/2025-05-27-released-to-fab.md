@@ -10,7 +10,7 @@ DeckConnect is now available for purchase on the [FAB marketplace](/fab)!
 
 Check out the release trailer right here:
 
-{% include video id="f7AevVU5Jmo" provider="youtube" %}
+{% include_cached video id="f7AevVU5Jmo" provider="youtube" %}
 
 DeckConnect is fully featured and can be deployed in your projects immediately!
 
