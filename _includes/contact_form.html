@@ -1,0 +1,65 @@
+<noscript><strong>You need Javascript enabled to use this form</strong><br /></noscript>
+
+<form class="contact-form" action="https://api.web3forms.com/submit" id="contactform" method="POST">
+  <input type="hidden" name="access_key" value="93e58bbb-5db7-41c6-a6e9-0ad83ffeb16c" />
+  <input type="hidden" name="subject" value="New DeckConnect Contact" />
+  <input type="hidden" name="redirect" value="https://deckconnect.me/sent" />
+
+  <div class="form-group-container">
+    <div class="form-group">
+      <label for="name" class="form-label">Name</label>
+      <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+    </div>
+    <div class="form-group">
+      <label for="email" class="form-label">Email</label>
+      <input id="email" name="email" class="form-input" placeholder="Your email" type="email" required />
+    </div>
+    <div class="form-group">
+      <label for="category" class="form-label">Category</label>
+      <select name="category" required id="category">
+        <option>General Inquiry</option>
+        <option>Feedback</option>
+        <option>Stream Deck Support</option>
+        <option>Unreal Plugin Support</option>
+        <option>Sales</option>
+      </select>
+    </div>
+    <div style="display: none" id="faborderid" class="form-group">
+      <label for="ordernum" class="form-label">FAB Order ID</label>
+      <input id="ordernum" name="ordernum" class="form-input" placeholder="Order ID #" type="text" />
+    </div>
+    <div class="form-group">
+      <label for="message" class="form-label">Message</label>
+      <textarea class="form-textarea" id="message" name="message" placeholder="Your message" rows="6" maxlength="2000" required></textarea>
+    </div>
+    <div class="h-captcha" data-captcha="true" data-theme="dark" data-size="slim"></div>
+  </div>
+  <button class="form-submit btn btn--info" type="submit">Send Message</button>
+</form>
+
+<script src="https://web3forms.com/client/script.js" async defer></script>
+<script>
+const form = document.getElementById('contactform');
+
+form.addEventListener('submit', function(e) {
+  const hCaptcha = form.querySelector('textarea[name=h-captcha-response]').value;
+  if (!hCaptcha) {
+    e.preventDefault();
+    alert("Please fill out captcha field");
+    return;
+  }
+});
+/* Show/hide FAB Order ID based off category selected */
+const faborderid = document.getElementById("faborderid");
+const fabordernum = document.getElementById("ordernum");
+document.getElementById("category").addEventListener("change", function(ev) {
+if (ev.target.value == "Unreal Plugin Support") {
+  faborderid.removeAttribute("style");
+  fabordernum.setAttribute("required", true);
+} else {
+  faborderid.setAttribute("style", "display: none");
+  fabordernum.removeAttribute("required");
+}
+});
+form.reset();
+</script>
