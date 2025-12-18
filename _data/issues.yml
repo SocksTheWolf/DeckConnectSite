@@ -13,8 +13,5 @@ source:
     id: streamdeck
     issues:
       - problem: On first install of the Elgato plugin, the _very first_ action button in the Stream Deck software may not work.
-        workaround: |
-          This is fixed by simply recreating the action button in the Stream Deck application.  
-          _Only the first button_ appears to exhibit this behavior.
         solution: Update to the latest version or recreate the action in the Stream Deck application.
         fixed_in: 0.2.4.2
