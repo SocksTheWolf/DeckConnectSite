@@ -2,7 +2,6 @@
 title: Stream Deck Plugin v0.2.4.2
 date: 2025-12-18 00:03 -0700
 excerpt: Update version v0.2.4.2 to the DeckConnect Stream Deck plugin
-published: false
 tags:
   - Elgato
 ---
