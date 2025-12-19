@@ -74,7 +74,7 @@ Use your Stream Deck with Unreal Applications running on other machines, servers
 
 ---
 
-Why bother juggling multiple input devices, jerryrigging the {% glossary OSC protocol %} or hardcoding keyboard commands? With DeckConnect you get fast, native integration.
+Why bother juggling multiple input devices, jerry rigging the {% glossary OSC protocol %} or hardcoding keyboard commands? With DeckConnect you get fast, native integration.
 {: .quick-bottom }
 The power is _right under your fingertips_.
 {: .text-right}
