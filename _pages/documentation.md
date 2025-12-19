@@ -163,7 +163,7 @@ This is the bread and butter of the entire system, and how you can directly inte
 
 Connects to the Stream Deck at the given address location. Does nothing if already connected. If no address is passed, it will use the connection address from the project settings.
 
-**NOTE**: By default, DeckConnect will autoconnect to the address in your settings. You can disable this functionality by unchecking the setting `Connect On Start` in the options.
+**NOTE**: By default, DeckConnect will automatically connect to the address in your settings. You can disable this functionality by unchecking the setting `Connect On Start` in the options.
 {: .notice--info}
 
 **C++**:
@@ -372,7 +372,7 @@ If you have any feedback, please feel free to [send a message via the contact fo
 
 ---
 
-{% include_cached issues.html %}
+{% include issues.html header="h4" %}
 
 ---
 

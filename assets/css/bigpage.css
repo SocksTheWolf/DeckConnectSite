@@ -29,6 +29,10 @@
   overflow-x: hidden;
 }
 
+.toc .active a {
+  background-color: #4EA1CE;
+}
+
 /* Flexible CSS sliding */
 @media (max-width: 1920px) {
   .setup #main, .docs #main {

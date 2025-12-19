@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "purge": "purgecss -v -css assets/css/*.css --output _site --content _site/**.html --safelist fa-tags fa-folder-open fa-x-twitter fa-facebook fa-screwdriver fa-book fa-linkedin fa-bluesky btn--x",
-    "purge-ci": "purgecss -v -css assets/css/*.css --content _site/**.html --output _site/assets/css --safelist fa-tags fa-folder-open fa-x-twitter fa-screwdriver fa-book fa-facebook fa-linkedin fa-bluesky btn--x"
+    "purge": "purgecss -v -css assets/css/*.css --output _site --content _site/**.html --safelist fa-tags fa-folder-open fa-x-twitter fa-facebook fa-screwdriver fa-book fa-linkedin fa-bluesky fa-magnifying-glass btn--x",
+    "purge-ci": "purgecss -v -css assets/css/*.css --content _site/**.html --output _site/assets/css --safelist fa-tags fa-folder-open fa-x-twitter fa-screwdriver fa-book fa-facebook fa-linkedin fa-magnifying-glass fa-bluesky btn--x"
   },
   "type": "module",
   "dependencies": {
