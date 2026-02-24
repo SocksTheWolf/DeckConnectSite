@@ -9,7 +9,7 @@ search_lite: true
 hide_subtitle: true
 permalink: /
 header:
-  video: 
+  video:
     id: f7AevVU5Jmo
     class: front-float
     width: 500

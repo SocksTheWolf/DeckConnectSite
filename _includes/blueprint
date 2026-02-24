@@ -6,7 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <script type="module">
       {{% raw %}}
-      import { Blueprint } 
+      import { Blueprint }
       {{% rawoff %}}
         from "{{ './assets/js/ueblueprint.min.js' | relative_url }}";
   </script>
@@ -18,7 +18,7 @@
     {% capture safe_name %}{{ include.file | replace "\.", ""}}{% endcapture %}
     <ueb-blueprint>
         <template id="{{safe_name}}">
-            {% include {{include_file}} %}                       
+            {% include {{include_file}} %}
         </template>
     </ueb-blueprint><br />
     <button class="btn btn--inverse copybpbutton" onclick="navigator.clipboard.writeText(document.getElementById('{{safe_name}}').innerHTML)">Copy Blueprint To Clipboard</button>

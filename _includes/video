@@ -31,7 +31,7 @@
 {% unless video_src == "" %}
   <div class="{% if include.class %}{{include.class}}{%else%}responsive-video-container{%endif%}">
     {% if include.image %}
-      <a href="#" data="{{ video_src }}&controls=0&autoplay=1&mute=1&enablejsapi=1&origin={{site.url}}&playsinline=1" title="Click to play video" data-policy="{{video_policy}}" data-videoid="{{video_id}}" data-width="{{include.width}}" data-height="{{include.height}}" class="video-media-thumb" 
+      <a href="#" data="{{ video_src }}&controls=0&autoplay=1&mute=1&enablejsapi=1&origin={{site.url}}&playsinline=1" title="Click to play video" data-policy="{{video_policy}}" data-videoid="{{video_id}}" data-width="{{include.width}}" data-height="{{include.height}}" class="video-media-thumb"
         style="{% if include.width %}width:{{include.width}}px;{%endif%} {% if include.height %}height: {{include.height}}px;{%endif%}">
         <style>
           {% if include.cutoff %}@media (min-width: {{include.cutoff}}) { {%endif%}

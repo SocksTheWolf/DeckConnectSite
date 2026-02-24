@@ -23,7 +23,7 @@
       {% for item in page.faq.items %}
         {"@type":"Question","name":"{{item.question | strip}}","acceptedAnswer":{"@type":"Answer","text":"{{item.answer | markdownify | strip_html | strip  }}"}}{% if forloop.last == false %},{% else %}]{% endif %}
       {% endfor %}{% if creator %},
-    "author": { 
+    "author": {
       {{ creator | strip }}
     }
     {% endif %}
