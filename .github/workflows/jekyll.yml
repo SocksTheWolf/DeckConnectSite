@@ -126,7 +126,7 @@ jobs:
         run: ls -lha _site/assets/css
       - name: No Maps
         if: success()
-        run: echo "" > _site/assets/css/main.css.map
+        run: rm -rf _site/assets/**/*.map
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v4

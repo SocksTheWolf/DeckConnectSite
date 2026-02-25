@@ -87,8 +87,6 @@ exclude:
   - .markdownlint.json
   - node_modules/
   - purgecss.config.cjs
-  - main.css.map
-  - main.min.js.map
   - package.json
   - package-lock.json
 
