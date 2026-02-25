@@ -113,10 +113,14 @@ jobs:
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+        # The main.css file needs to be moved back to the other directory so we can properly clean it
+      - name: Move main file
+        if: success()
+        run: mv _site/assets/css/main.css assets/css/main.css
       - name: Purge CSS
         if: success()
         # idk why but the output directory is much different than what it is on windows
-        run: npm run purge-ci 
+        run: npm run purge-ci
       - name: Sanity check
         if: success()
         run: ls -lha _site/assets/css

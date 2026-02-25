@@ -1,10 +1,10 @@
 {
   "scripts": {
-    "purge": "purgecss -v -css assets/css/*.css --output _site --content _site/**.html --safelist fa-tags fa-folder-open fa-x-twitter fa-facebook fa-screwdriver fa-book fa-chalkboard-user fa-linkedin fa-bluesky btn--x",
-    "purge-ci": "purgecss -v -css assets/css/*.css --content _site/**.html --output _site/assets/css --safelist fa-tags fa-folder-open fa-x-twitter fa-screwdriver fa-book fa-chalkboard-user fa-facebook fa-linkedin fa-bluesky btn--x"
+    "purge": "purgecss --config ./purgecss.config.cjs --output _site",
+    "purge-ci": "purgecss --config ./purgecss.config.cjs --output _site/assets/css"
   },
   "type": "module",
-  "dependencies": {
-    "purgecss": "^7.0.2"
+  "devDependencies": {
+    "purgecss": "^8.0.0"
   }
 }

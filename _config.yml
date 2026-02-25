@@ -120,6 +120,7 @@ jekyll-minifier:
     - 'ueblueprint.min.js'
     - 'fab.md'
     - 'deck.md'
+    - 'purgecss.config.cjs'
     - 'bp/**'
     - 'site.webmanifest'
     - 'examples/**'
