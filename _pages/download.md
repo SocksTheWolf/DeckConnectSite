@@ -54,7 +54,7 @@ faq:
       answer: >- 
         * If you are working in development, you'll need _both_ of the downloads above.
 
-        * If you're just an end user using an application that has DeckConnect, you can just download the Steam Deck plugin.
+        * If you're just an end user using an application that has DeckConnect, you can just download the Stream Deck plugin.
     - question: Will the end users of my application need to purchase DeckConnect?
       answer: Nope!  
       
