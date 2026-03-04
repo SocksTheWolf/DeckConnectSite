@@ -17,6 +17,7 @@ header:
     provider: "youtube"
     image: /assets/images/videothumb.webp
     cutoff: 1119px
+  og_image: /assets/images/bumper.jpg
   overlay_color: "#4182e4"
   overlay_filter: 0.4
   overlay_image: /assets/images/header.webp
