@@ -3,5 +3,6 @@ Disallow: /assets/css
 Disallow: /assets/js
 Disallow: /analytics
 Disallow: /cdn-cgi
+Disallow: /dl
 
 Sitemap: https://deckconnect.me/sitemap.xml

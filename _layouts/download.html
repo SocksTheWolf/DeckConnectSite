@@ -29,19 +29,25 @@ layout: splash
             {%- capture title -%}
               {{ plan.call_to_action.title | default: plan.name }}
             {%- endcapture -%}
-            <a rel="nofollow" title="{{ title }}" href="{{ plan.call_to_action.link }}">
-              {% if plan.call_to_action.image %}
-                <img
-                  alt="{{ title }}"
-                  src="{{ plan.call_to_action.image | absolute_url }}"
-                />
-              {% else %}
-                {{ plan.call_to_action.text }} &rarr;
-              {% endif %}
-            </a>
+            <span>
+              <a rel="nofollow" title="{{ title }}" href="{{ plan.call_to_action.link }}">
+                {% if plan.call_to_action.image %}
+                  <img
+                    alt="{{ title }}"
+                    src="{{ plan.call_to_action.image | absolute_url }}"
+                  />
+                {% else %}
+                  {{ plan.call_to_action.text }} &rarr;
+                {% endif %}
+              </a>
+            </span>
             {% if plan.call_to_action.alt_link %}
-            <span class="text-center alt-download">
-              <a rel="nofollow" title="click to download directly" href="{{ plan.call_to_action.alt_link }}">(alternative download)</a>
+            <span>
+              <a rel="nofollow" title="{{ plan.call_to_action.alt_title }}" href="{{ plan.call_to_action.alt_link }}">
+                {% if plan.call_to_action.alt_image %}
+                <img src="{{ plan.call_to_action.alt_image }}" alt="{{ plan.call_to_action.alt_title }}" />
+                {% endif %}
+              </a>
             </span>
             {% endif %}
           {% endunless %}

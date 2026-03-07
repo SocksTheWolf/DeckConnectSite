@@ -7,7 +7,7 @@ price: "$39.99"
 show_downloads: true
 page_css:
   - /assets/css/download.css
-dl_notice: 
+dl_notice:
   show: false
   text: >-
     **NOTE**: If you are integrating DeckConnect in a development environment such as in your Unreal application/editor, you will need the UE plugin.  
@@ -31,6 +31,9 @@ pricing_table:
       image: /assets/images/elgato-marketplace.png
       link: /deck
       title: "Get DeckConnect on Elgato Marketplace"
+      alt_link: /deck-direct
+      alt_image: /assets/images/streamdeck-badge.png
+      alt_title: "Download DeckConnect directly"
   - name: Unreal Engine Plugin
     color: "#3468b6"
     features:
