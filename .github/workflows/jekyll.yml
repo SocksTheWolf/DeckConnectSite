@@ -132,12 +132,7 @@ jobs:
         env:
           TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           DOWNLOAD: ${{ vars.DOWNLOAD_REPO }}
-        run: |
-          cd _site
-          mkdir dl
-          cd dl
-          curl -H "Authorization: token ${{env.TOKEN}}" --url ${{ env.DOWNLOAD }} --output com.socksthewolf.deckconnect.streamDeckPlugin
-          cd ../../
+        run: bash ${GITHUB_WORKSPACE}/.github/run.sh
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v4
