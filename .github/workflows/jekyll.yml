@@ -127,6 +127,17 @@ jobs:
       - name: No Maps
         if: success()
         run: rm -rf _site/assets/**/*.map
+      - name: Download Plugin
+        if: success()
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FILE_URL: ${{ secrets.DOWNLOAD_REPO }}
+        run: |
+          cd _site
+          mkdir dl
+          cd dl
+          curl -H "Authorization: token ${TOKEN}" --url ${{ FILE_URL }} --output com.socksthewolf.deckconnect.streamDeckPlugin
+          cd ../../
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v4
