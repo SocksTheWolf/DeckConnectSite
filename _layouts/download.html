@@ -39,6 +39,11 @@ layout: splash
                 {{ plan.call_to_action.text }} &rarr;
               {% endif %}
             </a>
+            {% if plan.call_to_action.alt_link %}
+            <span class="text-center alt-download">
+              <a rel="nofollow" title="click to download directly" href="{{ plan.call_to_action.alt_link }}">(alternative download)</a>
+            </span>
+            {% endif %}
           {% endunless %}
           </div>
         </li>

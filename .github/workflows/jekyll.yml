@@ -131,7 +131,7 @@ jobs:
         if: success()
         env:
           TOKEN: ${{ secrets.PERSONAL_TOKEN }}
-        run: bash ${GITHUB_WORKSPACE}/.github/run.sh
+        run: bash .github/run.sh
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v4

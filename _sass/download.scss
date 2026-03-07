@@ -71,15 +71,21 @@ $desktop: "(min-width: 768px)";
 			a {
 				display: block;
 				box-sizing: border-box;
-				padding: 15px 0;
+				padding: 0;
+				padding-top: 5px;
+				padding-bottom: 2px;
 				border-radius: 0 0 5px 5px;
 				border: 0;
 				color: white;
 				text-rendering: optimizeLegibility;
 			}
-      a:hover {
-        color: black;
-      }
+			a:hover {
+				color: black;
+			}
+			.alt-download a {
+				padding: unset;
+				font-size: small;
+			}
 		}
 
 		@media #{$desktop} {
