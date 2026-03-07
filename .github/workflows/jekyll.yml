@@ -129,13 +129,11 @@ jobs:
         run: rm -rf _site/assets/**/*.map
       - name: Download Plugin
         if: success()
-        env:
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           cd _site
           mkdir dl
           cd dl
-          curl -H "Authorization: token ${TOKEN}" --url ${{ secrets.DOWNLOAD_REPO }} --output com.socksthewolf.deckconnect.streamDeckPlugin
+          curl -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" --url ${{ secrets.DOWNLOAD_REPO }} --output com.socksthewolf.deckconnect.streamDeckPlugin
           cd ../../
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
