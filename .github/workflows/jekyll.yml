@@ -131,7 +131,7 @@ jobs:
         if: success()
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DOWNLOAD: "https://github.com/SocksTheWolf/DeckConnectBridge/releases/download/latest/com.socksthewolf.deckconnect.streamDeckPlugin"
+          DOWNLOAD: "https://github.com/SocksTheWolf/DeckConnectBridge/releases/latest/download/com.socksthewolf.deckconnect.streamDeckPlugin"
         run: |
           cd _site
           mkdir dl
