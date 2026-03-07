@@ -14,5 +14,5 @@ curl ${curl_custom_flags} \
      -L \
      -H "Accept: application/octet-stream" \
      -H "Authorization: Bearer ${TOKEN}" \
-        "https://api.github.com/repos/${org}/${repo}/releases/assets/${asset_id}" -o "_site/dl/${asset_name}"
+        "https://api.github.com/repos/${org}/${repo}/releases/assets/${asset_id}" -o "../_site/dl/${asset_name}"
 
