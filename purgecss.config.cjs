@@ -9,7 +9,7 @@ module.exports = {
     "fa-bluesky", "btn--x", "btn--linkedin", "btn--facebook", "btn--bluesky",
     "search-content", "pagination", "pagination--pager", "is--hidden", "is--visible",
     "search-content__inner-wrap", "search-content__form", "search-input", "sr-only",
-    "results", "clipboard-copy-button", "faqcontainer"],
+    "results", "clipboard-copy-button", "faqcontainer", "disabled"],
     deep: [/mfp-*/]
   }
 }
