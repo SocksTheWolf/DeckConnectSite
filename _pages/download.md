@@ -33,7 +33,7 @@ pricing_table:
       title: "Get DeckConnect on Elgato Marketplace"
       alt_link: /deck-direct
       alt_image: /assets/images/streamdeck-badge.png
-      alt_title: "Download DeckConnect directly"
+      alt_title: "Download DeckConnect directly (DRM free)"
   - name: Unreal Engine Plugin
     color: "#3468b6"
     features:
@@ -67,7 +67,6 @@ faq:
       answer: DeckConnect is a code plugin for the Unreal Engine. Please see the [FAB EULA](https://www.fab.com/eula) (specifically sections 2e, 5a, and 5b) for information about code plugin licenses.
     - question: Where can I purchase DeckConnect from?
       answer: Currently, the only purchase option is from the FAB marketplace. We might expand to other markets in the future. 
-      
 
         If you have special needs (such as bulk offers), feel free to [contact us](/contact).
     - question: What do I get with my purchase?
